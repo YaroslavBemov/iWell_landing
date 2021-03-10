@@ -1,0 +1,40 @@
+.advantage
+    padding: 80px
+    background-color: $primary-bg-white
+    @include pltc
+
+    &__heading
+        @include heading-2
+
+    &__cards
+        margin-top: 122px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        gap: 24px
+        
+
+    &__card
+        flex-basis: 384px
+        display: flex
+        flex-direction: column
+        flex-grow: 1
+        padding: 40px 10px
+        background-color: $primary-bg-light_green
+        border-radius: 5px
+
+    &__card-icon
+        height: 100px
+
+    &__card-head
+        margin-top: 20px
+        @include heading-3
+
+    &__card-text
+        margin-top: 16px
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 24px
+        text-align: center
+        color: $primary-text-grey

@@ -1,0 +1,59 @@
+.trainers
+    padding: 80px
+    @include pltc
+    background-color: $primary-bg-white
+
+    &__heading
+        @include primary-h2
+        color: $primary-text-grey
+
+    &__cards
+        margin-top: 80px
+        display: flex
+        gap: 40px
+
+    &__card
+
+    &__card-img
+        border-radius: 5px
+
+    &__card-head
+        margin-top: 30px
+        padding-bottom: 10px
+        display: flex
+        align-items: center
+        border-bottom: 1px solid $tertiary-dark-grey
+
+    &__card-name
+        @include secondary-h2
+        color: $primary-text-grey
+
+    &__card-link
+        @include secondary-h3
+        color: $secondary-text-orange
+        text-decoration: none
+        border: 2px solid $secondary-text-orange
+        border-radius: 5px
+        padding: 6px 16px
+
+    &__card-body
+        padding-top: 10px
+
+    &__card-type
+        @include secondary-h3
+        text-align: left
+        color: $primary-text-grey
+
+    &__card-rating
+        margin-top: 10px
+        @include secondary-h3
+        text-align: left
+        color: $primary-text-grey
+
+    &__arrows
+        margin: 100px auto 0
+        display: flex
+        justify-content: center
+        gap: 60px
+
+    &__arrow

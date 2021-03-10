@@ -1,0 +1,61 @@
+.care
+    padding: 80px
+    @include pltc
+    background-color: $primary-bg-white
+
+    &__heading
+        @include primary-h2
+        color: $primary-text-grey
+
+    &__container
+        margin-top: 60px
+        display: flex
+        justify-content: space-between
+
+    &__checks
+        display: flex
+        flex-direction: column
+        border: none
+
+    &__input
+        display: none
+        &:checked + .care__label > .care__arrow
+            transform: translateX(0px)
+        &:checked + .care__label > .care__arrow + span
+            transform: translateX(0px)
+        &:checked + .care__label
+            border-bottom: 2px solid $tertiary-green_01
+
+    &__label
+        width: 420px
+        padding: 20px 0
+        border-bottom: 1px solid $tertiary-dark-grey
+        @include primary-h3-text
+        color: $primary-text-grey
+        cursor: pointer
+        transition: border-bottom-color .3s ease-in-out
+        overflow: hidden
+
+    &__arrow
+        margin-right: 20px
+        display: inline-block
+        transform: translateX(-60px)
+        transition: transform .5s ease-in-out, opacity .5s
+        & + span
+            display: inline-block
+            transform: translateX(-60px)
+            transition: transform.5s ease-in-out, opacity .5s
+
+    &__arrow-img
+
+    &__slides
+
+    &__slide
+        display: none
+
+    &__img
+
+    &__text
+        margin-top: 20px
+        @include primary-h3-text
+        color: $primary-text-grey

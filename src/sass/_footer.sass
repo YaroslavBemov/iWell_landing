@@ -1,0 +1,21 @@
+.footer
+    padding: 60px
+    @include pltc
+    background-color: $primary-background-gray
+    display: flex
+    gap: 128px
+
+    &__row
+        display: flex
+        flex-direction: column
+
+    &__heading
+        margin-bottom: 20px
+        @include primary-h3-bold
+        color: $primary-text-white
+
+    &__link
+        margin-top: 12px
+        @include tertiary-h4
+        color: $primary-text-white
+        text-decoration: none
