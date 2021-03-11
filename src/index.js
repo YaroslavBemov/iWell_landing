@@ -1,6 +1,6 @@
 import 'normalize.css'
 import './sass/main.sass'
-import './sass/modal.sass'
+// import './sass/modal.sass'
 
 import modal from './js/modal'
 
@@ -8,4 +8,4 @@ import modal from './js/modal'
 // window.$ = {}
 // $.modal = modal
 
-window.m = modal()
+// window.m = modal()
