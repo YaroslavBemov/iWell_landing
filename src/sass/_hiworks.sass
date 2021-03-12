@@ -1,5 +1,6 @@
 .hiworks
-    @include padding-mobile
+    @include padding-around
+    background-color: $primary-bg-white
 
     &__heading
         @include secondary-h3
@@ -15,7 +16,7 @@
         // width: 50%
 
     &__element
-        //margin-left: 88px
+        display: none
 
     &__cards
         //max-width: 502px
@@ -23,19 +24,51 @@
         //flex-wrap: wrap
 
     &__card
-        &:first-child .hiworks__card-head
-            margin-top: 0
+        display: flex
+        gap: 14px
+
+    &__card-element
+        padding-top: 7px
+        display: flex
+        flex-direction: column
+        flex-basis: 60px
+        flex-shrink: 0
+
+        background: linear-gradient(180deg, transparent 26px, #236640 27px, #236640 27px, transparent 28px), linear-gradient(90deg, transparent 19px, #236640 20px, #236640 20px, transparent 21px)
+
+    &__card-circle
+        height: 40px
+        width: 40px
+        flex-shrink: 0
+        border: 1px solid #9EAEA4
+        border-radius: 50%
+        text-align: center
+        background: #EDECEA
+
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 40px
+        letter-spacing: 0.44px
+        color: #236640
+
+    &__card-content
 
     &__card-head
-        margin-top: 20px
+
+        font-style: normal
+        font-weight: 500
         font-size: 18px
         line-height: 24px
         color: $secondary-text-green
         //@include primary-h3-bold
 
     &__card-text
+        margin: 10px 0 20px
+
+        font-style: normal
+        font-weight: 500
         font-size: 18px
         line-height: 24px
         color: $primary-text-grey
-        margin-top: 10px
         //@include primary-h3-text
