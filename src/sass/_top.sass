@@ -24,3 +24,22 @@
 		margin-top: 40px
 		@include link-arrow
 		@include tertiary-h4($primary-text-white)
+
+@media (min-width: $media-desktop)
+	.top
+		padding-bottom: 167px
+		@include padding-left-right-calc($content)
+		background-image: url('../img/Главная_девушка.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+
+		&__heading
+			margin: 133px 0 0
+			max-width: 714px
+			@include primary-h1
+
+		&__text
+			margin: 40px 0 0
+			max-width: 588px
+			@include secondary-h2($primary-text-white)
+
+		&__link-arrow
+			margin-top: 70px

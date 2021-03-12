@@ -12,7 +12,6 @@
         left: 0
         top: 0
 
-
     &__menu
 
     &__logo
@@ -21,3 +20,33 @@
     &__list
         display: none
         list-style: none
+
+@media (min-width: $media-desktop)
+    .navbar
+        justify-content: space-between
+
+        &__label
+            display: none
+
+        &__logo
+            padding: 26px 0
+
+        &__logo-icon
+            height: 44px
+            width: 117px
+
+        &__list
+            display: flex
+
+        &__item
+
+        &__link
+            padding: 8px 20px
+            font-style: normal
+            font-weight: 500
+            font-size: 18px
+            line-height: 24px
+            letter-spacing: 0.44px
+            text-align: center
+            color: $primary-text-white
+            text-decoration: none

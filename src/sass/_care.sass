@@ -11,12 +11,15 @@
         //justify-content: space-between
 
     &__checks
+        padding: 0
+        border: none
+
         //display: flex
         //flex-direction: column
-        border: none
 
     &__input
         display: none
+
         //&:checked + .care__label > .care__arrow
         //    transform: translateX(0px)
         //&:checked + .care__label > .care__arrow + span
@@ -25,6 +28,13 @@
         //    border-bottom: 2px solid $tertiary-green_01
 
     &__label
+        display: inline-block
+        margin-top: 40px
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 24px
+
         //width: 420px
         //padding: 20px 0
         //border-bottom: 1px solid $tertiary-dark-grey
@@ -35,6 +45,7 @@
         //overflow: hidden
 
     &__arrow
+        display: none
         //margin-right: 20px
         //display: inline-block
         //transform: translateX(-60px)
@@ -52,8 +63,11 @@
         //display: none
 
     &__img
+        display: none
 
     &__text
+        margin-top: 17px
+        @include tertiary-h4
         //margin-top: 20px
         //@include primary-h3-text
         //color: $primary-text-grey

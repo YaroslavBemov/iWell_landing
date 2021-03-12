@@ -1,4 +1,12 @@
 /* Text primary */
+@mixin primary-h1($text-color: $primary-text-white)
+    font-style: normal
+    font-weight: 500
+    font-size: 64px
+    line-height: 72px
+    letter-spacing: 0.44px
+    color: $text-color
+
 @mixin primary-h2($text-color: $primary-text-grey)
     font-style: normal
     font-weight: 500
@@ -57,8 +65,8 @@
     background-position: $pos2 $pos1    //Поменял местами позиции
 
 @mixin padding-left-right-calc($content: 600px)
-    padding-left: calc(50% - #{content})
-    padding-right: calc(50% - #{content})
+    padding-left: calc(50% - #{$content / 2})
+    padding-right: calc(50% - #{$content / 2})
 
 @mixin link-arrow()
     padding: 14px 16px

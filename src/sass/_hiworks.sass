@@ -13,9 +13,8 @@
 
     &__img
         display: none
-        // width: 50%
 
-    &__element
+    &__link-arrow
         display: none
 
     &__cards
@@ -55,13 +54,11 @@
     &__card-content
 
     &__card-head
-
         font-style: normal
         font-weight: 500
         font-size: 18px
         line-height: 24px
         color: $secondary-text-green
-        //@include primary-h3-bold
 
     &__card-text
         margin: 10px 0 20px
@@ -71,4 +68,44 @@
         font-size: 18px
         line-height: 24px
         color: $primary-text-grey
-        //@include primary-h3-text
+
+@media (min-width: $media-desktop)
+    .hiworks
+        padding: 80px 0
+        @include padding-left-right-calc(1200px)
+
+        &__heading
+            @include primary-h2()
+
+        &__container
+            gap: 10px
+
+        &__img
+            display: block
+            //width: 50%
+
+        &__link-arrow
+            //TODO button wrap
+            display: inline-block
+            @include link-arrow
+
+        &__element
+
+        &__cards
+            max-width: 620px
+
+        &__card
+            &:last-child .hiworks__card-text
+                margin-bottom: 0
+
+        &__card-element
+
+        &__card-circle
+
+        &__card-content
+
+        &__card-head
+            @include primary-h3-bold($secondary-text-green)
+
+        &__card-text
+            @include primary-h3-text()
