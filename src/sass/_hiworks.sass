@@ -1,38 +1,41 @@
 .hiworks
-    padding: 80px
-    @include pltc
-    background-color: $primary-bg-white
+    @include padding-mobile
 
     &__heading
-        @include primary-h2
-        color: $primary-text-grey
+        @include secondary-h3
 
     &__container
+        margin-top: 40px
         display: flex
         justify-content: space-between
         align-items: center
 
     &__img
+        display: none
         // width: 50%
 
     &__element
-        margin-left: 88px
+        //margin-left: 88px
 
     &__cards
-        display: flex
-        flex-wrap: wrap
-        max-width: 502px
+        //max-width: 502px
+        //display: flex
+        //flex-wrap: wrap
 
     &__card
         &:first-child .hiworks__card-head
             margin-top: 0
 
     &__card-head
-        margin-top: 40px
-        @include primary-h3-bold
+        margin-top: 20px
+        font-size: 18px
+        line-height: 24px
         color: $secondary-text-green
+        //@include primary-h3-bold
 
     &__card-text
-        margin-top: 16px
-        @include primary-h3-text
+        font-size: 18px
+        line-height: 24px
         color: $primary-text-grey
+        margin-top: 10px
+        //@include primary-h3-text

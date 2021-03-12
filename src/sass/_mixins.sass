@@ -48,13 +48,16 @@
     line-height: 24px
     color: $text-color
 
+@mixin padding-mobile($top: 60px, $left-right: 16px, $bottom: 40px, $bg-color: $primary-bg-white)
+    padding: $top $left-right $bottom
+    background-color: $bg-color
 
-@mixin bgi($pos1: center, $pos2: center, $size: contain)
+@mixin bg-img($pos1: center, $pos2: center, $size: contain)
     background-repeat: no-repeat
     background-size: $size
     background-position: $pos2 $pos1    //Поменял местами позиции
 
-@mixin plrc($left: 600px, $right: 600px)
+@mixin padding-left-right-calc($left: 600px, $right: 600px)
     padding-left: calc(50% - #{left})
     padding-right: calc(50% - #{right})
 

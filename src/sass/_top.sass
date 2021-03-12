@@ -3,7 +3,13 @@
 	background-image: url('../img/main-girl-copy.png'), linear-gradient(to right, #528b6a, #a8ceb9)
 	//TODO element
 	//url('../img/Эллемент.png'),
-	@include bgi(bottom)
+	@include bg-img(bottom)
+
+	@media (min-width: 375px)
+		padding-bottom: 330px
+
+	@media (min-width: 425px)
+		padding-bottom: 360px
 
 	&__heading
 		margin: 40px 0 0

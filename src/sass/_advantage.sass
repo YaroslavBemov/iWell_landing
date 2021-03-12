@@ -1,38 +1,43 @@
 .advantage
-    padding: 60px 16px 40px
-    background-color: $primary-bg-white
+    @include padding-mobile
 
     &__heading
-        @include secondary-h3($primary-text-grey)
+        @include secondary-h3
 
     &__cards
         margin-top: 40px
         display: flex
         justify-content: space-between
         flex-wrap: wrap
-        //gap: 24px
+        gap: 15px
         
 
     &__card
-        flex-basis: 112px
+        padding: 14px 10px 8px
         display: flex
         flex-direction: column
         align-items: center
         justify-content: space-between
-        //flex-grow: 1
-        //padding: 40px 10px
-        //background-color: $primary-bg-light_green
-        //border-radius: 5px
+        flex-basis: 136px
+        flex-grow: 1
+        background-color: $primary-bg-light_green
+        border-radius: 5px
 
     &__card-icon
         height: 35px
 
     &__card-head
-        //margin-top: 20px
+        font-size: 10px
+        line-height: 10px
+        text-align: center
+        margin-top: 7px
         //@include heading-3
 
     &__card-text
-        //margin-top: 16px
+        font-size: 10px
+        line-height: 10px
+        text-align: center
+        margin-top: 7px
         //font-style: normal
         //font-weight: normal
         //font-size: 18px
