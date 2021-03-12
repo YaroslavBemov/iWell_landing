@@ -1,20 +1,20 @@
 .top
-	padding-bottom: 167px
-	background-image: url('../img/Главная_девушка.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+	padding: 0 16px 309px
+	background-image: url('../img/main-girl-copy.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+	//TODO element
 	//url('../img/Эллемент.png'),
-	@include bgi
-	@include pltc
+	@include bgi(bottom)
 
 	&__heading
-		max-width: 714px
-		margin-top: 133px
-		@include heading-1
+		margin: 40px 0 0
+		@include secondary-h2($primary-text-white)
 
 	&__text
-		max-width: 588px
-		margin: 40px 0 70px
-		@include paragraph
+		margin-top: 20px
+		@include secondary-h3($primary-text-white)
 
 	&__link-arrow
-		//margin-top: 70px
-		
+		display: inline-block
+		margin-top: 40px
+		@include link-arrow
+		@include tertiary-h4($primary-text-white)
