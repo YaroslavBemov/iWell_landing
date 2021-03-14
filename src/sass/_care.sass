@@ -58,12 +58,12 @@
     &__arrow-img
 
     &__slides
+        display: none
 
-    &__slide
-        //display: none
+    &__slide .care__text
 
     &__img
-        display: none
+        //display: none
 
     &__text
         margin-top: 17px
@@ -71,3 +71,67 @@
         //margin-top: 20px
         //@include primary-h3-text
         //color: $primary-text-grey
+
+@media (min-width: $media-desktop)
+    .care
+        padding: 80px 0
+        @include padding-left-right-calc(1200px)
+
+        &__heading
+            @include primary-h2()
+
+        &__container
+            margin-top: 60px
+            display: flex
+            justify-content: space-between
+
+        &__checks
+            display: flex
+            flex-direction: column
+
+        &__input
+            &:checked + .care__label > .care__arrow
+                transform: translateX(0px)
+            &:checked + .care__label > .care__arrow + span
+                transform: translateX(0px)
+            &:checked + .care__label
+                border-bottom: 2px solid $tertiary-green_01
+
+        &__label
+            width: 420px
+            padding: 20px 0
+            margin-top: 0
+            border-bottom: 1px solid $tertiary-dark-grey
+            @include primary-h3-text
+            cursor: pointer
+            transition: border-bottom-color .3s ease-in-out
+            overflow: hidden
+            & .care__text
+                display: none
+
+        &__arrow
+            margin-right: 20px
+            display: inline-block
+            transform: translateX(-60px)
+            transition: transform .5s ease-in-out, opacity .5s
+            & + span
+                display: inline-block
+                transform: translateX(-60px)
+                transition: transform.5s ease-in-out, opacity .5s
+
+        &__arrow-img
+
+
+        &__slides
+            display: block
+
+        &__slide
+            display: none
+
+        &__img
+            border-radius: 5px
+
+        &__text
+            margin-top: 20px
+            max-width: 690px
+            @include primary-h3-text

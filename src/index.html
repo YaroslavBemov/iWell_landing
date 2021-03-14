@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <title>Document</title>
+    <!--    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />-->
 </head>
 
 <body>
@@ -142,53 +143,41 @@
         Как это работает
     </h2>
     <div class="hiworks__container">
-
-        <div class="hiworks__img">
-            <img src="./img/pexels-mikhail-nilov-6707119%201.png" alt="hiworks">
+        <div class="hiworks__img-box">
+            <div class="hiworks__img">
+                <img src="./img/pexels-mikhail-nilov-6707119%201.png" alt="hiworks">
+            </div>
+            <a href="#" class="hiworks__link-arrow">Узнать подробнее</a>
         </div>
-        <a href="#" class="hiworks__link-arrow">Узнать подробнее</a>
 
         <!--cards-->
         <div class="hiworks__cards">
 
             <!--card 1-->
             <div class="hiworks__card">
-
                 <div class="hiworks__card-element">
-
                     <span class="hiworks__card-circle">1</span>
-
                 </div>
-
                 <div class="hiworks__card-content">
-
                     <h3 class="hiworks__card-head">
                         Посвящайте время тренировкам, а не поиску тренера
                     </h3>
-
                     <p class="hiworks__card-text">
                         Выберите понравившегося тренера (все тренеры имеют профессиональное образование) или пакет
                         тренировок
                     </p>
-
                 </div>
             </div>
 
             <!--card 2-->
             <div class="hiworks__card">
-
                 <div class="hiworks__card-element">
-
                     <span class="hiworks__card-circle">2</span>
-
                 </div>
-
                 <div class="hiworks__card-content">
-
                     <h3 class="hiworks__card-head">
                         Зарегистрируйтесь в личном кабинете
                     </h3>
-
                     <p class="hiworks__card-text">
                         Там вы сможете:<br>
                         записаться на тренировку<br>
@@ -196,51 +185,36 @@
                         посмотреть расписание<br>
                         пополнить счет
                     </p>
-
                 </div>
             </div>
 
             <!--card 3-->
             <div class="hiworks__card">
-
                 <div class="hiworks__card-element">
-
                     <span class="hiworks__card-circle">3</span>
-
                 </div>
-
                 <div class="hiworks__card-content">
-
                     <h3 class="hiworks__card-head">
                         Получайте каждую 6ю и 9ю тренировку в подарок
                     </h3>
-
                     <p class="hiworks__card-text">
                         И ещё какой-то текст
                     </p>
-
                 </div>
             </div>
 
             <!--card 4-->
             <div class="hiworks__card">
-
                 <div class="hiworks__card-element">
-
                     <span class="hiworks__card-circle">4</span>
-
                 </div>
-
                 <div class="hiworks__card-content">
-
                     <h3 class="hiworks__card-head">
                         Отслеживайте свой прогресс
                     </h3>
-
                     <p class="hiworks__card-text">
                         Планируйте свою неделю и следите за результатами, и все это в одном приложении
                     </p>
-
                 </div>
             </div>
 
@@ -278,6 +252,7 @@
         Мы заботимся о вас
     </h2>
     <div class="care__container">
+
         <fieldset class="care__checks">
 
             <input type="radio" id="person" class="care__input" name="care" checked>
@@ -286,6 +261,9 @@
                     <img src="./img/Arrow%202.svg" alt="arrow" class="care__arrow-img">
                 </span>
                 <span>Индивидуальный подход</span>
+                <p class="care__text">
+                    На групповой тренировке занимаются 4-5 человек -<br> чтобы тренер мог уделить время каждому
+                </p>
             </label>
 
             <input type="radio" id="coach" class="care__input" name="care">
@@ -294,6 +272,9 @@
                     <img src="./img/Arrow%202.svg" alt="arrow" class="care__arrow-img">
                 </span>
                 <span>Профессиональные тренеры</span>
+                <p class="care__text">
+                    С нами сотрудничают только тренеры с профессиональным образованием - для ваших безопасных тренировок
+                </p>
             </label>
 
             <input type="radio" id="gift" class="care__input" name="care">
@@ -302,6 +283,9 @@
                     <img src="./img/Arrow%202.svg" alt="arrow" class="care__arrow-img">
                 </span>
                 <span>Подарки</span>
+                <p class="care__text">
+                    Подарки и система поощрения - чтобы мотивировать вас для дальнейших свершений
+                </p>
             </label>
 
         </fieldset>
@@ -317,15 +301,15 @@
             </div>
 
             <div class="care__slide" id="coach-slide">
-                <img class="care__img" src="./img/workout-with-personal-trainer-doing-planks-long-shot%201.png"
+                <img class="care__img" src="./img/pexels-pavel-danilyuk-7055749%201.png"
                      alt="workout-with-personal-trainer">
                 <p class="care__text">
-                    С нами сотрудничают только тренера с профессиональным образованием - для ваших безопасных тренировок
+                    С нами сотрудничают только тренеры с профессиональным образованием - для ваших безопасных тренировок
                 </p>
             </div>
 
             <div class="care__slide" id="gift-slide">
-                <img class="care__img" src="./img/workout-with-personal-trainer-doing-planks-long-shot%201.png"
+                <img class="care__img" src="./img/pexels-gabby-k-5876688(1)%201.png"
                      alt="workout-with-personal-trainer">
                 <p class="care__text">
                     Подарки и система поощрения - чтобы мотивировать вас для дальнейших свершений
@@ -341,64 +325,143 @@
     <h2 class="fyway__heading">
         Найдите свое направление в GoFit
     </h2>
-    <div class="fyway__cards">
-        <div class="fyway__card">
-            <!--            <img src="./img/Fitness_Brunette_girl_Workout_Hands_Legs_588828_5120x3413%202.png"-->
-            <!--                 alt="Fitness_Brunette_girl_Workout_Hands_Legs" class="fyway__card-img">-->
-            <h3 class="fyway__card-heading">
-                Функциональный тренинг
-            </h3>
-            <p class="fyway__card-text">
-                Подтянутое и красивое тело
-            </p>
+
+    <!-- Slider main container -->
+    <div class="swiper-container fyway__swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper fyway__swiper-wrapper">
+            <!-- Slides -->
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide fyway__swiper-slide">
+                <h3 class="fyway__card-heading">
+                    Функциональный тренинг
+                </h3>
+                <p class="fyway__card-text">
+                    Подтянутое и красивое тело
+                </p>
+            </div>
+
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide fyway__swiper-slide">
+                <h3 class="fyway__card-heading">
+                    Силовой тренинг
+                </h3>
+                <p class="fyway__card-text">
+                    Укрепленые мышцы спины, живота, ягодиц
+                </p>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide fyway__swiper-slide">
+                <h3 class="fyway__card-heading">
+                    Пилатес
+                </h3>
+                <p class="fyway__card-text">
+                    Гибкое тело с эластичными мышцами
+                </p>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide fyway__swiper-slide">
+                <h3 class="fyway__card-heading">
+                    Йога
+                </h3>
+                <p class="fyway__card-text">
+                    Улучшенная осанка, укрепленный имунитет
+                </p>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="swiper-slide fyway__swiper-slide">
+                <h3 class="fyway__card-heading">
+                    Стретчинг
+                </h3>
+                <p class="fyway__card-text">
+                    Подвижные суставы, гибкость, шпагат
+                </p>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="swiper-slide fyway__swiper-slide">
+                <h3 class="fyway__card-heading">
+                    Зарядка
+                </h3>
+                <p class="fyway__card-text">
+                    Укрепление мышц, хорошее настроение
+                </p>
+            </div>
         </div>
-        <div class="fyway__card">
-            <!--            <img src="./img/Fitness_Plank_(exercise)_Hands_600177_6352x3573%201.png" alt="Fitness_Plank"-->
-            <!--                 class="fyway__card-img">-->
-            <h3 class="fyway__card-heading">
-                Силовой тренинг
-            </h3>
-            <p class="fyway__card-text">
-                Укрепленые мышцы спины, живота, ягодиц
-            </p>
-        </div>
-        <div class="fyway__card">
-            <!--            <img src="./img/pexels-elly-fairytale-3823117%201.png" alt="pexels-elly-fairytale" class="fyway__card-img">-->
-            <h3 class="fyway__card-heading">
-                Пилатес
-            </h3>
-            <p class="fyway__card-text">
-                Гибкое тело с эластичными мышцами
-            </p>
-        </div>
-        <div class="fyway__card">
-            <!--            <img src="./img/yoga-2959233%201.png" alt="yoga" class="fyway__card-img">-->
-            <h3 class="fyway__card-heading">
-                Йога
-            </h3>
-            <p class="fyway__card-text">
-                Улучшенная осанка, укрепленный имунитет
-            </p>
-        </div>
-        <div class="fyway__card">
-            <!--            <img src="./img/pexels-mikhail-nilov-6707079%201.png" alt="pexels-mikhail-nilov" class="fyway__card-img">-->
-            <h3 class="fyway__card-heading">
-                Стретчинг
-            </h3>
-            <p class="fyway__card-text">
-                Подвижные суставы, гибкость, шпагат
-            </p>
-        </div>
-        <div class="fyway__card">
-            <!--            <img src="./img/pexels-elly-fairytale-3823202%201.png" alt="pexels-elly-fairytale" class="fyway__card-img">-->
-            <h3 class="fyway__card-heading">
-                Зарядка
-            </h3>
-            <p class="fyway__card-text">
-                Укрепление мышц, хорошее настроение
-            </p>
-        </div>
+        <!-- If we need pagination -->
+        <!--        <div class="swiper-pagination fyway__swiper-pagination"></div>-->
+
+        <!-- If we need navigation buttons -->
+        <!--        <div class="swiper-button-prev fyway__swiper-button-prev"></div>-->
+        <!--        <div class="swiper-button-next yway__swiper-button-next"></div>-->
+
+        <!-- If we need scrollbar -->
+        <!--        <div class="swiper-scrollbar fyway__swiper-scrollbar"></div>-->
     </div>
+
+        <div class="fyway__cards">
+            <div class="fyway__card">
+                <img src="./img/Fitness_Brunette_girl_Workout_Hands_Legs_588828_5120x3413%202.png"
+                     alt="Fitness_Brunette_girl_Workout_Hands_Legs" class="fyway__card-img">
+                <h3 class="fyway__card-heading">
+                    Функциональный тренинг
+                </h3>
+                <p class="fyway__card-text">
+                    Подтянутое и красивое тело
+                </p>
+            </div>
+            <div class="fyway__card">
+                <img src="./img/Fitness_Plank_(exercise)_Hands_600177_6352x3573%201.png" alt="Fitness_Plank"
+                     class="fyway__card-img">
+                <h3 class="fyway__card-heading">
+                    Силовой тренинг
+                </h3>
+                <p class="fyway__card-text">
+                    Укрепленые мышцы спины, живота, ягодиц
+                </p>
+            </div>
+            <div class="fyway__card">
+                <img src="./img/pexels-elly-fairytale-3823117%201.png" alt="pexels-elly-fairytale" class="fyway__card-img">
+                <h3 class="fyway__card-heading">
+                    Пилатес
+                </h3>
+                <p class="fyway__card-text">
+                    Гибкое тело с эластичными мышцами
+                </p>
+            </div>
+            <div class="fyway__card">
+                <img src="./img/yoga-2959233%201.png" alt="yoga" class="fyway__card-img">
+                <h3 class="fyway__card-heading">
+                    Йога
+                </h3>
+                <p class="fyway__card-text">
+                    Улучшенная осанка, укрепленный имунитет
+                </p>
+            </div>
+            <div class="fyway__card">
+                <img src="./img/pexels-mikhail-nilov-6707079%201.png" alt="pexels-mikhail-nilov" class="fyway__card-img">
+                <h3 class="fyway__card-heading">
+                    Стретчинг
+                </h3>
+                <p class="fyway__card-text">
+                    Подвижные суставы, гибкость, шпагат
+                </p>
+            </div>
+            <div class="fyway__card">
+                <img src="./img/pexels-elly-fairytale-3823202%201.png" alt="pexels-elly-fairytale" class="fyway__card-img">
+                <h3 class="fyway__card-heading">
+                    Зарядка
+                </h3>
+                <p class="fyway__card-text">
+                    Укрепление мышц, хорошее настроение
+                </p>
+            </div>
+        </div>
 </section>
 
 <!-- trainers -->
@@ -581,6 +644,8 @@
 <!--        <a href="#" class="footer__link">Онлайн классы</a>-->
 <!--    </div>-->
 <!--</footer>-->
+<!--<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>-->
+<!--<script>const swiper = new Swiper('.swiper-container')</script>-->
 </body>
 
 </html>

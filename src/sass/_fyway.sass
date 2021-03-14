@@ -1,30 +1,83 @@
 .fyway
-    padding: 80px
-    @include pltc
+    @include padding-around
     background-color: $primary-bg-white
 
     &__heading
-        @include primary-h2
-        color: $primary-text-grey
+        @include secondary-h3
+
+    &__swiper-container
+        margin-top: 40px
+        //margin-left: 0
+        height: 350px
+        width: 257px
+    &__swiper-wrapper
+    &__swiper-slide
+        //margin-right: 16px
+        position: relative
+        background-repeat: no-repeat
+        //display: flex
+        //justify-content: center
+        //align-items: center
+        &:nth-child(1)
+            background-image: url('../img/Fitness_Brunette_girl_Workout_Hands_Legs_588828_5120x3413 2-1.png')
+        &:nth-child(2)
+            background-image: url('../img/Fitness_Plank_exercise_Hands_600177_6352x3573_1-1.png')
+        &:nth-child(3)
+            background-image: url('../img/pexels-elly-fairytale-3823117 1-1.png')
+        &:nth-child(4)
+            background-image: url('../img/yoga-2959233 1-1.png')
+        &:nth-child(5)
+            background-image: url('../img/pexels-mikhail-nilov-6707079 1-1.png')
+        &:nth-child(6)
+            background-image: url('../img/pexels-elly-fairytale-3823117 1-1.png')
+    &__card-heading
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 24px
+        position: absolute
+        top: 270px
+    &__card-text
+        @include tertiary-h4
+        position: absolute
+        top: 300px
+    &__swiper-pagination
+    &__swiper-button-prev
+    &__swiper-button-next
+    &__swiper-scrollbar
 
     &__cards
-        margin-top: 80px
-        display: flex
-        flex-wrap: wrap
-        justify-content: space-around
-        gap: 50px
+        display: none
 
-    &__card
-        flex-basis: 340px
+@media (min-width: $media-desktop)
+    .fyway
+        padding: 80px 0
+        @include padding-left-right-calc($content)
 
-    &__card-img
+        &__heading
+            @include primary-h2
 
-    &__card-heading
-        margin-top: 20px
-        @include primary-h3-bold
-        color: $primary-text-grey
+        &__swiper-container
+            display: none
 
-    &__card-text
-        margin-top: 16px
-        @include primary-h3-text
-        color: $primary-text-grey
+        &__cards
+            margin-top: 80px
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-around
+            gap: 50px
+
+        &__card
+            flex-basis: 340px
+
+        &__card-img
+
+        &__card-heading
+            position: static
+            margin-top: 20px
+            @include primary-h3-bold
+
+        &__card-text
+            position: static
+            margin-top: 16px
+            @include primary-h3-text
