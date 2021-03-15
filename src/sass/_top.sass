@@ -1,5 +1,5 @@
 .top
-	@include padding-around(0, 16px, 309px)
+	@include padding-around(0, 0, 309px)
 	background-image: url('../img/main-girl-copy.png'), linear-gradient(to right, #528b6a, #a8ceb9)
 	//TODO element
 	//url('../img/Эллемент.png'),
@@ -11,17 +11,23 @@
 	@media (min-width: 425px)
 		padding-bottom: 360px
 
+	&__logo-img
+		position: absolute
+		top: 16px
+		left: 50%
+		transform: translateX(-50%)
+
 	&__heading
-		margin: 40px 0 0
+		margin: 40px 16px 0
 		@include secondary-h2($primary-text-white)
 
 	&__text
-		margin-top: 20px
+		margin: 20px 16px 0
 		@include secondary-h3($primary-text-white)
 
 	&__link-arrow
 		display: inline-block
-		margin-top: 40px
+		margin: 40px 16px 0
 		@include link-arrow
 		@include tertiary-h4($primary-text-white)
 

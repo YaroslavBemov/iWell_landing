@@ -14,44 +14,29 @@
 <section class="top">
 
     <!-- navbar -->
-    <nav class="top__navbar navbar">
-        <input id="menu-burger" type="checkbox">
-        <label class="navbar__label" for="menu-burger">
-            <img class="navbar__menu" src="./img/menu.png" alt="burger">
+    <div class="top__navbar navbar">
+        <a href="index.html"><img class="top__logo-img" src="./img/logo-m.png" alt="logo"></a>
+        <input id="toggle" type="checkbox">
+        <label class="toggle-container" for="toggle">
+            <span class="button button-toggle"></span>
         </label>
-        <a class="navbar__logo" href="/">
-            <img class="navbar__logo-icon" src="./img/logo-m.png" alt="logo">
-        </a>
-        <ul class="navbar__list">
-            <li class="navbar__item">
-                <a href="#advantage" class="navbar__link">Преимущества</a>
-            </li>
-            <li class="navbar__item">
-                <a href="#hiworks" class="navbar__link">Как это работает</a>
-            </li>
-            <li class="navbar__item">
-                <a href="#care" class="navbar__link">Заботимся о вас</a>
-            </li>
-            <li class="navbar__item">
-                <a href="#fyway" class="navbar__link">Направления</a>
-            </li>
-            <li class="navbar__item">
-                <a href="#trainers" class="navbar__link">Тренеры</a>
-            </li>
-            <li class="navbar__item">
-                <a href="#subscribe" class="navbar__link">Тарифы</a>
-            </li>
-        </ul>
-        <!--        <a href="#" class="navbar__account link">-->
-        <!--            <img src="./img/account.svg" alt="account">-->
-        <!--            Личный кабинет-->
-        <!--        </a>-->
-    </nav>
+
+        <nav class="nav">
+            <a class="nav-item" href="#advantage">Преимущества</a>
+            <a class="nav-item" href="#hiworks">Как это работает</a>
+            <a class="nav-item" href="#care">Заботимся о вас</a>
+            <a class="nav-item" href="#fyway">Направления</a>
+            <a class="nav-item" href="#trainers">Тренеры</a>
+            <a class="nav-item" href="#subscribe">Тарифы</a>
+        </nav>
+
+
+    </div>
     <!-- end navbar -->
 
     <h1 class="top__heading">GoFit - это онлайн тренировки у вас дома</h1>
     <p class="top__text">Бережет твое время на поиски идеального тренера</p>
-    <a href="#" class="top__link-arrow">Узнать подробнее</a>
+    <a href="#hiworks" class="top__link-arrow">Узнать подробнее</a>
 </section>
 <!-- end top block -->
 
@@ -147,7 +132,7 @@
             <div class="hiworks__img">
                 <img src="./img/pexels-mikhail-nilov-6707119%201.png" alt="hiworks">
             </div>
-            <a href="#" class="hiworks__link-arrow">Узнать подробнее</a>
+            <a href="#trynl" class="hiworks__link-arrow">Узнать подробнее</a>
         </div>
 
         <!--cards-->
@@ -359,7 +344,8 @@
 
             <!-- Slide 3 -->
             <div class="swiper-slide fyway__swiper-slide">
-                <img src="./img/pexels-elly-fairytale-3823117%201-1.png" alt="pexels-elly-fairytale" class="fyway__card-img">
+                <img src="./img/pexels-elly-fairytale-3823117%201-1.png" alt="pexels-elly-fairytale"
+                     class="fyway__card-img">
                 <h3 class="fyway__card-heading">
                     Пилатес
                 </h3>
@@ -381,7 +367,8 @@
 
             <!-- Slide 5 -->
             <div class="swiper-slide fyway__swiper-slide">
-                <img src="./img/pexels-mikhail-nilov-6707079%201-1.png" alt="pexels-mikhail-nilov" class="fyway__card-img">
+                <img src="./img/pexels-mikhail-nilov-6707079%201-1.png" alt="pexels-mikhail-nilov"
+                     class="fyway__card-img">
                 <h3 class="fyway__card-heading">
                     Стретчинг
                 </h3>
@@ -392,7 +379,8 @@
 
             <!-- Slide 6 -->
             <div class="swiper-slide fyway__swiper-slide">
-                <img src="./img/pexels-elly-fairytale-3823202%201-1.png" alt="pexels-elly-fairytale" class="fyway__card-img">
+                <img src="./img/pexels-elly-fairytale-3823202%201-1.png" alt="pexels-elly-fairytale"
+                     class="fyway__card-img">
                 <h3 class="fyway__card-heading">
                     Зарядка
                 </h3>
@@ -496,14 +484,15 @@
             <!-- Slides -->
             <!-- Slide 1 -->
             <div class="swiper-slide trainers__swiper-slide">
-                <img src="./img/smiling-sports-woman-standing-with-arms-folded-and-looking-at-camera-isolated-on-white-wall.jpg" alt="photo" class="trainers__card-img">
+                <img src="./img/smiling-sports-woman-standing-with-arms-folded-and-looking-at-camera-isolated-on-white-wall.jpg"
+                     alt="photo" class="trainers__card-img">
                 <div class="trainers__card-head">
                     <span class="trainers__card-name">
                         Наталия Барсенева
                     </span>
-<!--                    <a href="#" class="trainers__card-link">-->
-<!--                        Профиль-->
-<!--                    </a>-->
+                    <!--                    <a href="#" class="trainers__card-link">-->
+                    <!--                        Профиль-->
+                    <!--                    </a>-->
                 </div>
                 <div class="trainers__card-body">
                     <p class="trainers__card-type">
@@ -524,9 +513,9 @@
                     <span class="trainers__card-name">
                         Василий Березин
                     </span>
-<!--                    <a href="#" class="trainers__card-link">-->
-<!--                        Профиль-->
-<!--                    </a>-->
+                    <!--                    <a href="#" class="trainers__card-link">-->
+                    <!--                        Профиль-->
+                    <!--                    </a>-->
                 </div>
                 <div class="trainers__card-body">
                     <p class="trainers__card-type">
@@ -547,9 +536,9 @@
                     <span class="trainers__card-name">
                         Елена Рожнова
                     </span>
-<!--                    <a href="#" class="trainers__card-link">-->
-<!--                        Профиль-->
-<!--                    </a>-->
+                    <!--                    <a href="#" class="trainers__card-link">-->
+                    <!--                        Профиль-->
+                    <!--                    </a>-->
                 </div>
                 <div class="trainers__card-body">
                     <p class="trainers__card-type">
@@ -564,7 +553,8 @@
 
             <!-- Slide 4 -->
             <div class="swiper-slide trainers__swiper-slide">
-                <img src="./img/smiling-sports-woman-standing-with-arms-folded-and-looking-at-camera-isolated-on-white-wall.jpg" alt="photo" class="trainers__card-img">
+                <img src="./img/smiling-sports-woman-standing-with-arms-folded-and-looking-at-camera-isolated-on-white-wall.jpg"
+                     alt="photo" class="trainers__card-img">
                 <div class="trainers__card-head">
                     <span class="trainers__card-name">
                         Наталия Барсенева
@@ -641,71 +631,71 @@
         <!--        <div class="swiper-scrollbar trainers__swiper-scrollbar"></div>-->
     </div>
 
-<!--    <div class="trainers__cards">-->
-<!--        <div class="trainers__card">-->
-<!--            <img src="./img/smiling-sports-woman-standing-with-arms-folded-and-looking-at-camera-isolated-on-white-wall.jpg"-->
-<!--                 alt="photo" class="trainers__card-img">-->
-<!--            <div class="trainers__card-head">-->
-<!--                    <span class="trainers__card-name">-->
-<!--                        Наталия Барсенева-->
-<!--                    </span>-->
-<!--                <a href="#" class="trainers__card-link">-->
-<!--                    Профиль-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="trainers__card-body">-->
-<!--                <p class="trainers__card-type">-->
-<!--                    Фитнес - тренер-->
-<!--                </p>-->
-<!--                <p class="trainers__card-rating">-->
-<!--                    5.0-->
-<!--                    <img src="./img/Star%201.png" alt="star" class="trainers__card-rating-icon">-->
-<!--                </p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="trainers__card">-->
-<!--            <img src="./img/sportive-man-black-shirt-closing-his-arm-muscles.jpg" alt="photo"-->
-<!--                 class="trainers__card-img">-->
-<!--            <div class="trainers__card-head">-->
-<!--                    <span class="trainers__card-name">-->
-<!--                        Наталия Барсенева-->
-<!--                    </span>-->
-<!--                <a href="#" class="trainers__card-link">-->
-<!--                    Профиль-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="trainers__card-body">-->
-<!--                <p class="trainers__card-type">-->
-<!--                    Фитнес - тренер-->
-<!--                </p>-->
-<!--                <p class="trainers__card-rating">-->
-<!--                    5.0-->
-<!--                    <img src="./img/Star%201.png" alt="star" class="trainers__card-rating-icon">-->
-<!--                </p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="trainers__card">-->
-<!--            <img src="./img/strong-muscular-blonde-girl-preparing-for-a-competition-with-blue-dumbbells-on-white.jpg"-->
-<!--                 alt="photo" class="trainers__card-img">-->
-<!--            <div class="trainers__card-head">-->
-<!--                    <span class="trainers__card-name">-->
-<!--                        Наталия Барсенева-->
-<!--                    </span>-->
-<!--                <a href="#" class="trainers__card-link">-->
-<!--                    Профиль-->
-<!--                </a>-->
-<!--            </div>-->
-<!--            <div class="trainers__card-body">-->
-<!--                <p class="trainers__card-type">-->
-<!--                    Фитнес - тренер-->
-<!--                </p>-->
-<!--                <p class="trainers__card-rating">-->
-<!--                    5.0-->
-<!--                    <img src="./img/Star%201.png" alt="star" class="trainers__card-rating-icon">-->
-<!--                </p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+    <!--    <div class="trainers__cards">-->
+    <!--        <div class="trainers__card">-->
+    <!--            <img src="./img/smiling-sports-woman-standing-with-arms-folded-and-looking-at-camera-isolated-on-white-wall.jpg"-->
+    <!--                 alt="photo" class="trainers__card-img">-->
+    <!--            <div class="trainers__card-head">-->
+    <!--                    <span class="trainers__card-name">-->
+    <!--                        Наталия Барсенева-->
+    <!--                    </span>-->
+    <!--                <a href="#" class="trainers__card-link">-->
+    <!--                    Профиль-->
+    <!--                </a>-->
+    <!--            </div>-->
+    <!--            <div class="trainers__card-body">-->
+    <!--                <p class="trainers__card-type">-->
+    <!--                    Фитнес - тренер-->
+    <!--                </p>-->
+    <!--                <p class="trainers__card-rating">-->
+    <!--                    5.0-->
+    <!--                    <img src="./img/Star%201.png" alt="star" class="trainers__card-rating-icon">-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="trainers__card">-->
+    <!--            <img src="./img/sportive-man-black-shirt-closing-his-arm-muscles.jpg" alt="photo"-->
+    <!--                 class="trainers__card-img">-->
+    <!--            <div class="trainers__card-head">-->
+    <!--                    <span class="trainers__card-name">-->
+    <!--                        Наталия Барсенева-->
+    <!--                    </span>-->
+    <!--                <a href="#" class="trainers__card-link">-->
+    <!--                    Профиль-->
+    <!--                </a>-->
+    <!--            </div>-->
+    <!--            <div class="trainers__card-body">-->
+    <!--                <p class="trainers__card-type">-->
+    <!--                    Фитнес - тренер-->
+    <!--                </p>-->
+    <!--                <p class="trainers__card-rating">-->
+    <!--                    5.0-->
+    <!--                    <img src="./img/Star%201.png" alt="star" class="trainers__card-rating-icon">-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="trainers__card">-->
+    <!--            <img src="./img/strong-muscular-blonde-girl-preparing-for-a-competition-with-blue-dumbbells-on-white.jpg"-->
+    <!--                 alt="photo" class="trainers__card-img">-->
+    <!--            <div class="trainers__card-head">-->
+    <!--                    <span class="trainers__card-name">-->
+    <!--                        Наталия Барсенева-->
+    <!--                    </span>-->
+    <!--                <a href="#" class="trainers__card-link">-->
+    <!--                    Профиль-->
+    <!--                </a>-->
+    <!--            </div>-->
+    <!--            <div class="trainers__card-body">-->
+    <!--                <p class="trainers__card-type">-->
+    <!--                    Фитнес - тренер-->
+    <!--                </p>-->
+    <!--                <p class="trainers__card-rating">-->
+    <!--                    5.0-->
+    <!--                    <img src="./img/Star%201.png" alt="star" class="trainers__card-rating-icon">-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
     <!--        <div class="trainers__arrows">-->
     <!--            <img src="./img/Arrow%204.png" alt="arrow" class="trainers__arrow">-->
     <!--            <img src="./img/Arrow%203.png" alt="arrow" class="trainers__arrow">-->
@@ -731,7 +721,7 @@
             <p class="subscribe__card-price">
                 1590 ₽
             </p>
-            <a href="#" class="subscribe__card-link">
+            <a href="#trynl" class="subscribe__card-link">
                 Выбрать
             </a>
         </div>
@@ -748,7 +738,7 @@
             <p class="subscribe__card-price">
                 2690 ₽
             </p>
-            <a href="#" class="subscribe__card-link">
+            <a href="#trynl" class="subscribe__card-link">
                 Выбрать
             </a>
         </div>
@@ -765,7 +755,7 @@
             <p class="subscribe__card-price">
                 4700 ₽
             </p>
-            <a href="#" class="subscribe__card-link">
+            <a href="#trynl" class="subscribe__card-link">
                 Выбрать
             </a>
         </div>
@@ -782,7 +772,7 @@
             <p class="subscribe__card-price">
                 0 ₽
             </p>
-            <a href="#" class="subscribe__card-link">
+            <a href="#trynl" class="subscribe__card-link">
                 Выбрать
             </a>
         </div>
