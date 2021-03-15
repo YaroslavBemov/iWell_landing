@@ -11,7 +11,7 @@
 	@media (min-width: 425px)
 		padding-bottom: 360px
 
-	&__logo-img
+	&__logo
 		position: absolute
 		top: 16px
 		left: 50%
@@ -36,6 +36,11 @@
 		padding-bottom: 167px
 		@include padding-left-right-calc($content)
 		background-image: url('../img/Главная_девушка.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+
+		&__logo
+			top: 28px
+			left: 0
+			transform: translateX(0)
 
 		&__heading
 			margin: 133px 0 0
