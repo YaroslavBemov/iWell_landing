@@ -14,4 +14,13 @@ import 'swiper/swiper-bundle.css'
 // window.m = modal()
 
 const fywaySwiper = new Swiper('.swiper-container.fyway__swiper-container')
-const trainersSwiper = new Swiper('.swiper-container.trainers__swiper-container')
+const trainersSwiper = new Swiper('.swiper-container.trainers__swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    breakpoints: {
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 39
+        }
+    }
+})

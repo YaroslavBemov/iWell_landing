@@ -1,5 +1,4 @@
 .trainers
-    //padding: 80px
     @include padding-around()
     background-color: $primary-bg-white
 
@@ -8,62 +7,38 @@
 
     &__swiper-container
         margin-top: 40px
-        //min-height: 360px
         width: 250px
+
     &__swiper-wrapper
+
     &__swiper-slide
         display: flex
         flex-direction: column
         background-repeat: no-repeat
 
-        &:nth-child(1)
-            //background-image: url('../img/smiling-sports-woman-standing-with-arms-folded-and-looking-at-camera-isolated-on-white-wall-1.jpg')
-        &:nth-child(2)
-            //background-image: url('../img/sportive-man-black-shirt-closing-his-arm-muscles-1.jpg')
-        &:nth-child(3)
-            //background-image: url('../img/strong-muscular-blonde-girl-preparing-for-a-competition-with-blue-dumbbells-on-white-1.jpg')
     &__swiper-pagination
     &__swiper-button-prev
     &__swiper-button-next
     &__swiper-scrollbar
 
     &__cards
-        //margin-top: 80px
-        //display: flex
-        //gap: 40px
 
     &__card
 
     &__card-img
-        //border-radius: 5px
+        border-radius: 5px
 
     &__card-head
         padding: 16px 0 10px
         border-bottom: 1px solid #9EAEA4
 
-
-        //margin-top: 30px
-        //padding-bottom: 10px
-        //display: flex
-        //align-items: center
-        //border-bottom: 1px solid $tertiary-dark-grey
-
     &__card-name
-
         font-style: normal
         font-weight: 500
         font-size: 18px
         line-height: 24px
-        //@include secondary-h2
-        //color: $primary-text-grey
 
     &__card-link
-        //@include secondary-h3
-        //color: $secondary-text-orange
-        //text-decoration: none
-        //border: 2px solid $secondary-text-orange
-        //border-radius: 5px
-        //padding: 6px 16px
 
     &__card-body
         padding-top: 10px
@@ -71,36 +46,29 @@
     &__card-type
         @include tertiary-h4
 
-        //@include secondary-h3
-        //text-align: left
-        //color: $primary-text-grey
-
     &__card-rating
         display: flex
         @include tertiary-h4
 
-        //margin-top: 10px
-        //@include secondary-h3
-        //text-align: left
-        //color: $primary-text-grey
+    &__card-rating-icon
+        margin-left: 6px
 
     &__arrows
-        //margin: 100px auto 0
-        //display: flex
-        //justify-content: center
-        //gap: 60px
 
     &__arrow
 
 @media (min-width: $media-desktop)
     .trainers
-        //padding: 80px
-        //@include pltc
-        //background-color: $primary-bg-white
+        padding: 80px 0
+        @include padding-left-right-calc($content)
+        background-color: $primary-bg-white
 
         &__heading
-            //@include primary-h2
-            //color: $primary-text-grey
+            @include primary-h2
+
+        &__swiper-container
+            width: 1233px
+            margin-top: 80px
 
         &__cards
             //margin-top: 80px
@@ -113,35 +81,29 @@
             //border-radius: 5px
 
         &__card-head
-            //margin-top: 30px
+            margin-top: 30px
             //padding-bottom: 10px
             //display: flex
             //align-items: center
             //border-bottom: 1px solid $tertiary-dark-grey
 
         &__card-name
-            //@include secondary-h2
-            //color: $primary-text-grey
+            @include secondary-h2
 
         &__card-link
-            //@include secondary-h3
-            //color: $secondary-text-orange
-            //text-decoration: none
-            //border: 2px solid $secondary-text-orange
-            //border-radius: 5px
-            //padding: 6px 16px
 
         &__card-body
             //padding-top: 10px
 
         &__card-type
-            //@include secondary-h3
+            @include secondary-h3
             //text-align: left
             //color: $primary-text-grey
 
         &__card-rating
             //margin-top: 10px
-            //@include secondary-h3
+            @include secondary-h3
+            align-items: center
             //text-align: left
             //color: $primary-text-grey
 
