@@ -84,7 +84,8 @@ const plugins = () => {
         new HTMLWebpackPlugin({
             template: './index.html',
             minify: {
-                collapseWhitespace: isProd
+                collapseWhitespace: isProd,
+                removeComments: isProd
             }
         }),
         new CleanWebpackPlugin(),
