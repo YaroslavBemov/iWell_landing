@@ -790,12 +790,13 @@
     </h2>
 
     <div class="trynl__content">
-        <form action="" method="post" class="trynl__form">
+        <form action="actions/sendToBidFromLand_bot.php" method="post" class="trynl__form">
             <h3 class="trynl__form-heading">
                 Оставьте нам Ваши контакты
             </h3>
-            <input type="text" name="name" class="trynl__form-input trynl__form-input-text" placeholder="Имя">
-            <input type="tel" name="phone" class="trynl__form-input trynl__form-input-tel" placeholder="Телефон, телеграмм или ...">
+            <input required type="text" name="name" class="trynl__form-input trynl__form-input-text" placeholder="Имя">
+            <input required type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" name="phone" class="trynl__form-input trynl__form-input-tel" placeholder="Телефон">
+            <input type="hidden" name="act" value="bid">
             <button type="submit" class="trynl__form-btn">
                 Отправить
             </button>
