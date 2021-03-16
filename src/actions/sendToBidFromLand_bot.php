@@ -13,14 +13,14 @@ if (!empty($action) && $action === 'bid') {
 
     if (empty($name)) {
         $nameErr = 'Name is empty.';
-    } elseif (!preg_match("^[a-zA-Z ]*$", $name)) {
-        $nameErr = "Only letters and white space allowed.";
+    } elseif (!preg_match("^[a-zA-Zа-яА-ЯёЁ ]*$", $name)) {
+        $nameErr = "Мы первый раз видим такое имя, пожалуйста, используйте буквы.";
     }
 
     if (empty($phone)) {
         $phoneErr = 'Phone is empty.';
     } elseif (!preg_match("^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$", $phone)) {
-        $phoneErr = "Invalid phone number.";
+        $phoneErr = "Для указания номера телефона используйте цифры.";
     }
 
     //Собираем в массив то, что будет передаваться боту
