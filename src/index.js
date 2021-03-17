@@ -14,11 +14,19 @@ import 'swiper/swiper-bundle.css'
 // window.m = modal()
 
 const fywaySwiper = new Swiper('.swiper-container.fyway__swiper-container', {
-    spaceBetween: 16
+    spaceBetween: 16,
+    navigation: {
+        nextEl: '.swiper-button-next.fyway__swiper-button-next',
+        prevEl: '.swiper-button-prev.fyway__swiper-button-prev',
+    }
 })
 const trainersSwiper = new Swiper('.swiper-container.trainers__swiper-container', {
     slidesPerView: 1,
     spaceBetween: 16,
+    navigation: {
+        nextEl: '.swiper-button-next.trainers__swiper-button-next',
+        prevEl: '.swiper-button-prev.trainers__swiper-button-prev'
+    },
     breakpoints: {
         1024: {
             slidesPerView: 3,
