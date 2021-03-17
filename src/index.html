@@ -64,39 +64,37 @@
 <!--            type="image/webp">-->
 
 <!--    // load jpg in different sizes if browser doesn't support webp-->
-<!--    <source media="(min-width: 1025px)"-->
-<!--            srcset="siteimages/image-full.jpg"-->
-<!--            type="image/jpeg">-->
-<!--    <source media="(max-width: 1024px)"-->
-<!--            srcset="siteimages/image-1024.jpg"-->
-<!--            type="image/jpeg">-->
-<!--    <source media="(max-width: 768px)"-->
-<!--            srcset="siteimages/image-768.jpg"-->
-<!--            type="image/jpeg">-->
-<!--    <source media="(max-width: 500px)"-->
-<!--            srcset="siteimages/image-500.jpg"-->
-<!--            type="image/jpeg">-->
+<!--    <source media="(max-width: 426px)"-->
+<!--            srcset="./img/bg/resized/main-girl-full-640.png"-->
+<!--            type="image/png">-->
+<!--    <source media="(max-width: 767px)"-->
+<!--            srcset="./img/bg/resized/main-girl-full-768.png"-->
+<!--            type="image/png">-->
+<!--    <source media="(max-width: 1023px)"-->
+<!--            srcset="./img/bg/resized/main-girl-full-1024.png"-->
+<!--            type="image/png">-->
+<!--    <source media="(min-width: 1024px)"-->
+<!--            srcset="./img/bg/resized/main-girl-full-1600.png"-->
+<!--            type="image/png">-->
+
+
+
+
 
 <!--    // fallback in different sizes, as well as regular src.-->
-<!--    <img-->
-<!--            srcset="siteimages/image-1920.jpg 1920w,-->
-<!--                    siteimages/image-1600.jpg 1600w,-->
-<!--                    siteimages/image-1366.jpg 1366w,-->
-<!--                    siteimages/image-1024.jpg 1024w,-->
-<!--                    siteimages/image-768.jpg 768w,-->
-<!--                    siteimages/image-640.jpg 640w"-->
+    <img srcset="   ./img/bg/resized/main-girl-full-1600.png 1600w,
+                    ./img/bg/resized/main-girl-full-1366.png 1366w,
+                    ./img/bg/resized/main-girl-full-1024.png 1024w,
+                    ./img/bg/resized/main-girl-full-768.png 768w,
+                    ./img/bg/resized/main-girl-full-640.png 640w,
+                    ./img/bg/resized/main-girl-full-320.png 320w"
 
-<!--            sizes="(min-width: 1920px) 1920px,-->
-<!--                    (min-width: 1600px) 1600px,-->
-<!--                    (min-width: 1366px) 1366px,-->
-<!--                    (min-width: 1024px) 1024px,-->
-<!--                    (min-width: 768px) 768px,-->
-<!--                    100vw"-->
+            sizes="(min-width: 1024px) 80vw, (min-width: 768px) 80vw, 95vw"
 
-<!--            src="siteimages/image-full.jpg"-->
+            src="./img/bg/resized/main-girl-full-1024.png"
 
-<!--            alt="image description"-->
-<!--            class="myimageclass">-->
+            alt="girl"
+            class="top__image">
 
 <!--    &lt;!&ndash;    1920px (this covers FullHD screens and up)&ndash;&gt;-->
 <!--    &lt;!&ndash;    1600px (this will cover 1600px desktops and several tablets in portrait mode, for example iPads at 768px width, which will request a 2x image of 1536px and above)&ndash;&gt;-->
