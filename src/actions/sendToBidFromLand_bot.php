@@ -13,7 +13,7 @@ if (!empty($action) && $action === 'bid') {
 
     if (empty($name)) {
         $nameErr = 'Name is empty.';
-    } elseif (!preg_match("^[a-zA-Zа-яА-ЯёЁ ]*$", $name)) {
+    } elseif (!preg_match("^[a-zA-Zа-яА-ЯёЁьъ ]*$", $name)) {
         $nameErr = "Мы первый раз видим такое имя, пожалуйста, используйте буквы.";
     }
 
