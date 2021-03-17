@@ -5,11 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <title>Document</title>
+    <title>iWell</title>
     <!--    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />-->
 </head>
 
 <body>
+
+<picture>
+    // load webp in different sizes if browser supports it
+    <source media="(min-width: 1025px)"
+            srcset="webp/image-full.webp"
+            type="image/webp">
+    <source media="(max-width: 1024px)"
+            srcset="webp/image-1024.webp"
+            type="image/webp">
+    <source media="(max-width: 768px)"
+            srcset="webp/image-768.webp"
+            type="image/webp">
+    <source media="(max-width: 500px)"
+            srcset="webp/image-500.webp"
+            type="image/webp">
+
+    // load jpg in different sizes if browser doesn't support webp
+    <source media="(min-width: 1025px)"
+            srcset="siteimages/image-full.jpg"
+            type="image/jpeg">
+    <source media="(max-width: 1024px)"
+            srcset="siteimages/image-1024.jpg"
+            type="image/jpeg">
+    <source media="(max-width: 768px)"
+            srcset="siteimages/image-768.jpg"
+            type="image/jpeg">
+    <source media="(max-width: 500px)"
+            srcset="siteimages/image-500.jpg"
+            type="image/jpeg">
+
+    // fallback in different sizes, as well as regular src.
+    <img
+            srcset="siteimages/image-1920.jpg 1920w,
+                    siteimages/image-1600.jpg 1600w,
+                    siteimages/image-1366.jpg 1366w,
+                    siteimages/image-1024.jpg 1024w,
+                    siteimages/image-768.jpg 768w,
+                    siteimages/image-640.jpg 640w"
+
+            sizes="(min-width: 1920px) 1920px,
+                    (min-width: 1600px) 1600px,
+                    (min-width: 1366px) 1366px,
+                    (min-width: 1024px) 1024px,
+                    (min-width: 768px) 768px,
+                    100vw"
+
+            src="siteimages/image-full.jpg"
+
+            alt="image description"
+            class="myimageclass">
+
+<!--    1920px (this covers FullHD screens and up)-->
+<!--    1600px (this will cover 1600px desktops and several tablets in portrait mode, for example iPads at 768px width, which will request a 2x image of 1536px and above)-->
+<!--    1366px (it is the most widespread desktop resolution)-->
+<!--    1024px (1024x768 screens, excluding iPads which are hi-density anyway, are rarer, but I think you need some image size in between, not to leave too big a gap between pixel sizes, in case the market changes)-->
+<!--    768px (useful for 2x 375px mobile screens, as well as any device that actually requests something close to 768px)-->
+<!--    640px (for smartphones)-->
+</picture>
+
 <!-- top block -->
 <section class="top">
 
