@@ -64,45 +64,53 @@
 <!--            type="image/webp">-->
 
 <!--    // load jpg in different sizes if browser doesn't support webp-->
-<!--    <source media="(max-width: 426px)"-->
-<!--            srcset="./img/bg/resized/main-girl-full-640.png"-->
-<!--            type="image/png">-->
 <!--    <source media="(max-width: 767px)"-->
-<!--            srcset="./img/bg/resized/main-girl-full-768.png"-->
-<!--            type="image/png">-->
-<!--    <source media="(max-width: 1023px)"-->
-<!--            srcset="./img/bg/resized/main-girl-full-1024.png"-->
-<!--            type="image/png">-->
-<!--    <source media="(min-width: 1024px)"-->
-<!--            srcset="./img/bg/resized/main-girl-full-1600.png"-->
+<!--            sizes="(max-width: 767px) 95vw, 320px"-->
+<!--            srcset="./img/bg/resized/main-girl-full-640.png 640w,-->
+<!--                    ./img/bg/resized/main-girl-full-768.png 768w"-->
 <!--            type="image/png">-->
 
+<!--    <source media="(min-width: 768px) and (max-width: 991px)"-->
+<!--            sizes="(max-width: 991px) 60vw, 500px"-->
+<!--            srcset="./img/bg/resized/main-girl-full-768.png 768w,-->
+<!--                    ./img/bg/resized/main-girl-full-1024.png 1024w"-->
+<!--            type="image/png">-->
 
+<!--    <source media="(min-width: 992px) and (max-width: 1199px)"-->
+<!--            sizes="(max-width: 1199px) 60vw, 600px"-->
+<!--            srcset="./img/bg/resized/main-girl-full-1366.png 1366w,-->
+<!--                    ./img/bg/resized/main-girl-full-1024.png 1024w"-->
+<!--            type="image/png">-->
 
-
+<!--    <source media="(min-width: 1200px)"-->
+<!--            sizes="(min-width: 1199px) 60vw, 700px"-->
+<!--            srcset="./img/bg/resized/main-girl-full-1600.png 1600w,-->
+<!--                    ./img/bg/resized/main-girl-full-1366.png 1366w"-->
+<!--            type="image/png">-->
 
 <!--    // fallback in different sizes, as well as regular src.-->
     <img srcset="   ./img/bg/resized/main-girl-full-1600.png 1600w,
                     ./img/bg/resized/main-girl-full-1366.png 1366w,
                     ./img/bg/resized/main-girl-full-1024.png 1024w,
                     ./img/bg/resized/main-girl-full-768.png 768w,
-                    ./img/bg/resized/main-girl-full-640.png 640w,
-                    ./img/bg/resized/main-girl-full-320.png 320w"
+                    ./img/bg/resized/main-girl-full-640.png 640w,"
 
-            sizes="(min-width: 1024px) 80vw, (min-width: 768px) 80vw, 95vw"
+            sizes=" (min-width: 1024px) 60vw,
+                    (min-width: 768px) 60vw,
+                    95vw"
 
             src="./img/bg/resized/main-girl-full-1024.png"
 
             alt="girl"
             class="top__image">
-
+<!--</picture>-->
 <!--    &lt;!&ndash;    1920px (this covers FullHD screens and up)&ndash;&gt;-->
 <!--    &lt;!&ndash;    1600px (this will cover 1600px desktops and several tablets in portrait mode, for example iPads at 768px width, which will request a 2x image of 1536px and above)&ndash;&gt;-->
 <!--    &lt;!&ndash;    1366px (it is the most widespread desktop resolution)&ndash;&gt;-->
 <!--    &lt;!&ndash;    1024px (1024x768 screens, excluding iPads which are hi-density anyway, are rarer, but I think you need some image size in between, not to leave too big a gap between pixel sizes, in case the market changes)&ndash;&gt;-->
 <!--    &lt;!&ndash;    768px (useful for 2x 375px mobile screens, as well as any device that actually requests something close to 768px)&ndash;&gt;-->
 <!--    &lt;!&ndash;    640px (for smartphones)&ndash;&gt;-->
-<!--</picture>-->
+
 
 <!-- top block -->
 <section class="top">
@@ -278,6 +286,7 @@
                     <h3 class="hiworks__card-head">
                         Получайте каждую 6ю и 9ю тренировку в подарок
                     </h3>
+<!--                    TODO rewrite text-->
                     <p class="hiworks__card-text">
                         И ещё какой-то текст
                     </p>

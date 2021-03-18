@@ -3,7 +3,7 @@
 $token = "1636349509:AAGTDPQ4NZOA5aKGRtP_LgjaiEXbdrQDYHA";
 $chat_id = "-523610126";
 define('DELAY', 3000);
-define('REDIRECT_URL', 'https://yarbemov.ru/gofit');
+define('REDIRECT_URL', 'https://iwellmart.com');
 
 $action = test_input($_POST['act']);
 $name = test_input($_POST['name']);
@@ -13,13 +13,13 @@ if (!empty($action) && $action === 'bid') {
 
     if (empty($name)) {
         $nameErr = 'Name is empty.';
-    } elseif (!preg_match("^[a-zA-Zа-яА-ЯёЁьъ ]*$", $name)) {
+    } elseif (!preg_match("/^[\s\w]*$/u", $name)) {
         $nameErr = "Мы первый раз видим такое имя, пожалуйста, используйте буквы.";
     }
 
     if (empty($phone)) {
         $phoneErr = 'Phone is empty.';
-    } elseif (!preg_match("^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$", $phone)) {
+    } elseif (!preg_match("/^[\d\s\S]*$/", $phone)) {
         $phoneErr = "Для указания номера телефона используйте цифры.";
     }
 
@@ -27,12 +27,12 @@ if (!empty($action) && $action === 'bid') {
     if ($nameErr) {
         echo showAlert(
             $nameErr,
-            'https://yarbemov.ru/gofit/#trynl'
+            REDIRECT_URL . '/#trynl'
         );
     } elseif ($phoneErr) {
         echo showAlert(
             $phoneErr,
-            'https://yarbemov.ru/gofit/#trynl'
+            REDIRECT_URL . '/#trynl'
         );
     } else {
         $arr = array(
@@ -55,7 +55,7 @@ if (!empty($action) && $action === 'bid') {
         } else {
             echo showAlert(
                 'Что-то пошло не так. Попробуйте отправить форму ещё раз.',
-                'https://yarbemov.ru/gofit/#trynl'
+                REDIRECT_URL . '/#trynl'
             );
         }
     }
