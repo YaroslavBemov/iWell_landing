@@ -1,4 +1,4 @@
-@mixin retina($min-width) {
+@mixin retina($min-width: $media-mobile) {
     @media (-webkit-min-device-pixel-ratio: 2) and (min-width: $min-width),
     (min--moz-device-pixel-ratio: 2) and (min-width: $min-width),
     (-o-min-device-pixel-ratio: 2/1) and (min-width: $min-width),

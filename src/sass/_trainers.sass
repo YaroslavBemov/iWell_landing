@@ -8,13 +8,29 @@
     &__swiper-container
         margin-top: 40px
         width: 250px
+        height: 360px
 
     &__swiper-wrapper
 
     &__swiper-slide
         display: flex
         flex-direction: column
+        justify-content: flex-end
         background-repeat: no-repeat
+        background-size: contain
+        border-radius: 5px
+        &:nth-child(1)
+            background-image: url('../img/Natalia-Barseneva.jpg')
+        &:nth-child(2)
+            background-image: url('../img/Vasiliy-Berezin.jpg')
+        &:nth-child(3)
+            background-image: url('../img/Elena-Rojnova.jpg')
+        &:nth-child(4)
+            background-image: url('../img/Natalia-Barseneva.jpg')
+        &:nth-child(5)
+            background-image: url('../img/Vasiliy-Berezin.jpg')
+        &:nth-child(6)
+            background-image: url('../img/Elena-Rojnova.jpg')
 
     &__arrow
         display: block
@@ -35,7 +51,7 @@
     &__card
 
     &__card-img
-        border-radius: 5px
+        //border-radius: 5px
 
     &__card-head
         padding: 16px 0 10px
@@ -56,11 +72,13 @@
         @include tertiary-h4
 
     &__card-rating
-        display: flex
         @include tertiary-h4
+        background-image: url('../img/start-small-icon.svg')
+        background-repeat: no-repeat
+        background-position: 30px center
 
     &__card-rating-icon
-        margin-left: 6px
+        //margin-left: 6px
 
     &__arrows
 

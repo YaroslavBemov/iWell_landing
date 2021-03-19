@@ -1,26 +1,24 @@
 .top
-	//&__image
-	//	width: 320px
-	//	@media (min-width: $media-desktop)
-	//		width: 800px
-
-	@include padding-around(0, 0, 309px)
-	background-image: url('../img/main-girl-copy.png'), linear-gradient(to right, #528b6a, #a8ceb9)
-	//TODO element
-	//url('../img/Эллемент.png'),
+	min-height: 840px
+	//padding-bottom: 360px
+	background-image: url('../img/main-girl-640.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+	//TODO url('../img/circles-icon.png')
 	@include bg-img(bottom)
 
-	@media (min-width: 375px)
-		padding-bottom: 330px
-
-	@media (min-width: 425px)
-		padding-bottom: 360px
+	@include retina($media-mobile)
+		background-image: url('../img/main-girl-768.png'), linear-gradient(to right, #528b6a, #a8ceb9)
 
 	&__logo
 		position: absolute
 		top: 16px
 		left: 50%
 		transform: translateX(-50%)
+		&-img
+			width: 55px
+			height: 22px
+		&-img:first-child
+			width: 29px
+			margin-right: 5px
 
 	&__heading
 		margin: 40px 16px 0
@@ -32,15 +30,22 @@
 
 	&__link-arrow
 		display: inline-block
-		margin: 40px 16px 0
+		margin: 40px 0 0 16px
 		@include link-arrow
 		@include tertiary-h4($primary-text-white)
+
+
+@media (min-width: $media-tablet)
+	.top
+		background-image: url('../img/main-girl-1024.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+
+		@include retina($media-tablet)
+			background-image: url('../img/main-girl-1366.png'), linear-gradient(to right, #528b6a, #a8ceb9)
 
 @media (min-width: $media-desktop)
 	.top
 		padding-bottom: 167px
 		@include padding-left-right-calc($content)
-		background-image: url('../img/Главная_девушка.png'), linear-gradient(to right, #528b6a, #a8ceb9)
 
 		&__logo
 			top: 28px

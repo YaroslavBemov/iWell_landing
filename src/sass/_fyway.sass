@@ -7,17 +7,31 @@
 
     &__swiper-container
         margin-top: 40px
-        //height: 350px
         width: 257px
+        height: 350px
 
     &__swiper-wrapper
 
     &__swiper-slide
         position: relative
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
         background-repeat: no-repeat
-        //display: flex
-        //justify-content: center
-        //align-items: center
+        background-size: contain
+        border-radius: 5px
+        &:nth-child(1)
+            background-image: url('../img/functional-training.jpg')
+        &:nth-child(2)
+            background-image: url('../img/power-training.jpg')
+        &:nth-child(3)
+            background-image: url('../img/pilates.jpg')
+        &:nth-child(4)
+            background-image: url('../img/yoga.jpg')
+        &:nth-child(5)
+            background-image: url('../img/stretching.jpg')
+        &:nth-child(6)
+            background-image: url('../img/charging.jpg')
 
     &__card-img
         
@@ -31,6 +45,7 @@
         font-weight: 500
         font-size: 18px
         line-height: 24px
+        color: $primary-text-grey
 
     &__card-text
         margin-top: 10px
