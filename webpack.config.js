@@ -96,17 +96,17 @@ const plugins = () => {
     const base = [
         new HTMLWebpackPlugin({
             template: './index.html',
-            minify: {
-                collapseWhitespace: isProd,
-                removeComments: isProd
-            }
+            // minify: {
+            //     collapseWhitespace: isProd,
+            //     removeComments: isProd
+            // }
         }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
-            {
-                from: path.resolve(__dirname, 'src/img'),
-                to: path.resolve(__dirname, 'dist/img')
-            },
+            // {
+            //     from: path.resolve(__dirname, 'src/img'),
+            //     to: path.resolve(__dirname, 'dist/img')
+            // },
             {
                 from: path.resolve(__dirname, 'src/actions'),
                 to: path.resolve(__dirname, 'dist/actions')
@@ -129,7 +129,7 @@ module.exports = {
     mode: 'development',
     entry: {
         main: [
-            '@babel/polyfill',
+            // '@babel/polyfill',
             './index.js'
         ]
     },
@@ -154,6 +154,13 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.html$/i,
+                loader: 'html-loader',
+                options: {
+                    minimize: true
+                }
+            },
+            {
                 test: /\.css$/,
                 use: cssLoaders()
             },
@@ -166,11 +173,40 @@ module.exports = {
                 use: cssLoaders('sass-loader')
             },
             {
-                test: /\.(png|jpg|svg|gif)$/,
-                loader: 'file-loader',
-                options: {
-                    outputPath: 'img',
-                }
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'img',
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                            },
+                            // optipng.enabled: false will disable optipng
+                            optipng: {
+                                enabled: false,
+                            },
+                            pngquant: {
+                                quality: [0.65, 0.90],
+                                speed: 4
+                            },
+                            gifsicle: {
+                                enabled: false,
+                                // interlaced: false,
+                            },
+                            // the webp option will enable WEBP
+                            webp: {
+                                enabled: false,
+                                quality: 75
+                            }
+                        }
+                    },
+                ],
             },
             {
                 test: /\.(ttf|woff|woff2|eot)$/,
