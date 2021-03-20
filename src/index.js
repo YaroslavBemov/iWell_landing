@@ -42,6 +42,12 @@ const enableSwiper = function() {
         spaceBetween: 16,
         // freeMode: true,
         // slidesPerView: 'auto',
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        // lazy: true,
         navigation: {
             nextEl: '.swiper-button-next.fyway__swiper-button-next',
             prevEl: '.swiper-button-prev.fyway__swiper-button-prev',
@@ -59,6 +65,12 @@ breakpointChecker();
 const trainersSwiper = new Swiper('.swiper-container.trainers__swiper-container', {
     slidesPerView: 1,
     spaceBetween: 16,
+    loop: true,
+    // lazy: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     navigation: {
         nextEl: '.swiper-button-next.trainers__swiper-button-next',
         prevEl: '.swiper-button-prev.trainers__swiper-button-prev'
