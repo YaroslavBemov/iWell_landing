@@ -1,6 +1,5 @@
 .top
-	min-height: 1010px
-	//padding-bottom: 360px
+	padding-bottom: calc(100vw + 20px)
 	background-image: url('../img/main-girl-640.png'), linear-gradient(to right, #528b6a, #a8ceb9)
 	//TODO url('../img/circles-icon.png')
 	@include bg-img(bottom)
@@ -14,11 +13,12 @@
 		left: 50%
 		transform: translateX(-50%)
 		&-img
+			width: 29px
+			height: 22px
+			margin-right: 5px
+		&-text
 			width: 55px
 			height: 22px
-		&-img:first-child
-			width: 29px
-			margin-right: 5px
 
 	&__heading
 		margin: 40px 16px 0
@@ -37,15 +37,38 @@
 
 @media (min-width: $media-tablet)
 	.top
-		background-image: url('../img/main-girl-1024.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+		padding-bottom: calc(55vw + 20px)
+		background: right bottom/65% no-repeat url('../img/main-girl-1024.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+
+		&__logo
+			top: 25px
+			&-img
+				width: 40px
+				height: 30px
+			&-text
+				width: 65px
+				height: 30px
+
+		&__heading
+			margin: 60px 170px 0 30px
+			@include primary-h1($primary-text-white)
+
+		&__text
+			margin: 40px 30px 0 30px
+			@include secondary-h2($primary-text-white)
+
+		&__link-arrow
+			margin: 40px auto 0 30px
+			@include secondary-h3($primary-text-white)
 
 		@include retina($media-tablet)
-			background-image: url('../img/main-girl-1366.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+			background: right bottom/65% no-repeat url('../img/main-girl-1366.png'), linear-gradient(to right, #528b6a, #a8ceb9)
 
 @media (min-width: $media-desktop)
 	.top
 		padding-bottom: 167px
 		@include padding-left-right-calc($content)
+		background: 50vw bottom/700px no-repeat url('../img/main-girl-1024.png'), linear-gradient(to right, #528b6a, #a8ceb9)
 
 		&__logo
 			top: 28px
@@ -63,4 +86,4 @@
 			@include secondary-h2($primary-text-white)
 
 		&__link-arrow
-			margin-top: 70px
+			margin: 70px 0 0

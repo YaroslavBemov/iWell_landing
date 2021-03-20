@@ -7,31 +7,17 @@
 
     &__swiper-container
         margin-top: 40px
-        width: 257px
-        height: 350px
+        max-width: 340px
+        //height: 350px
 
     &__swiper-wrapper
 
     &__swiper-slide
-        position: relative
+        //max-width: calc(100vw - 60px)
         display: flex
         flex-direction: column
-        justify-content: flex-end
-        background-repeat: no-repeat
-        background-size: contain
         border-radius: 5px
-        &:nth-child(1)
-            background-image: url('../img/functional-training.jpg')
-        &:nth-child(2)
-            background-image: url('../img/power-training.jpg')
-        &:nth-child(3)
-            background-image: url('../img/pilates.jpg')
-        &:nth-child(4)
-            background-image: url('../img/yoga.jpg')
-        &:nth-child(5)
-            background-image: url('../img/stretching.jpg')
-        &:nth-child(6)
-            background-image: url('../img/charging.jpg')
+        overflow: hidden
 
     &__card-img
         
@@ -58,13 +44,52 @@
 
     &__swiper-button-next
         color: $tertiary-light-grey
-        //background-image: url('../img/Arrow 3.png')
-        //background-repeat: no-repeat
-        //background-size: 51px 16px
+
     &__swiper-scrollbar
 
-    &__cards
-        display: none
+
+@media (min-width: $media-tablet)
+    .fyway
+        padding: 60px 30px
+
+        &__heading
+            font-style: normal
+            font-weight: 500
+            font-size: 64px
+            line-height: 72px
+
+        &__card-heading
+            font-style: normal
+            font-weight: bold
+            font-size: 24px
+            line-height: 36px
+
+        &__card-text
+            font-style: normal
+            font-weight: 450
+            font-size: 24px
+            line-height: 36px
+
+        &__swiper-container
+            margin-top: 10px
+            max-width: none
+            margin-left: 0
+            margin-right: 0
+
+        &__swiper-wrapper
+            flex-wrap: wrap
+            justify-content: space-evenly
+
+        &__swiper-slide
+            margin-top: 30px
+            flex-basis: 340px
+
+        &__swiper-button-prev
+            display: none
+
+        &__swiper-button-next
+            display: none
+
 
 @media (min-width: $media-desktop)
     .fyway
@@ -72,28 +97,30 @@
         @include padding-left-right-calc($content)
 
         &__heading
-            @include primary-h2
+            //@include primary-h2
 
         &__swiper-container
-            display: none
+            margin-top: 50px
+            //margin: 80px 0
+            //display: none
 
         &__cards
-            margin-top: 80px
-            display: flex
-            flex-wrap: wrap
-            justify-content: space-around
+            //margin-top: 80px
+            //display: flex
+            //flex-wrap: wrap
+            //justify-content: space-around
 
         &__card
-            flex-basis: 340px
+            //flex-basis: 340px
 
         &__card-img
 
         &__card-heading
-            position: static
-            margin-top: 20px
-            @include primary-h3-bold
+            //position: static
+            //margin-top: 20px
+            //@include primary-h3-bold
 
         &__card-text
-            position: static
-            margin-top: 16px
-            @include primary-h3-text
+            //position: static
+            //margin-top: 16px
+            //@include primary-h3-text

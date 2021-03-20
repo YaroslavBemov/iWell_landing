@@ -58,6 +58,44 @@
         margin-top: 7px
         color: $primary-text-grey
 
+
+@media (min-width: $media-tablet)
+    .advantage
+        padding: 60px 30px
+
+        &__heading
+            font-style: normal
+            font-weight: 500
+            font-size: 64px
+            line-height: 64px
+            letter-spacing: 0.44px
+
+        &__cards
+
+        &__card
+            margin: 9px
+            padding: 40px 10px
+            flex-basis: 320px
+
+        &__card-icon
+            width: 92px
+            height: 92px
+
+        &__card-head
+            margin-top: 20px
+            font-style: normal
+            font-weight: bold
+            font-size: 24px
+            line-height: 36px
+
+        &__card-text
+            margin-top: 16px
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 24px
+
+
 @media (min-width: $media-desktop)
     .advantage
         padding: 80px 0
@@ -72,10 +110,29 @@
         &__card
             margin: 12px
             padding: 40px 30px
-            flex-basis: 360px
+            flex-basis: 320px
+            &:nth-child(1)
+                margin-left: 0
+                margin-top: 0
+            &:nth-child(2)
+                margin-right: 12px
+                margin-top: 0
+            &:nth-child(3)
+                margin-left: 12px
+                margin-right: 0
+                margin-top: 0
+            &:nth-child(4)
+                margin-right: 12px
+                margin-left: 0
+                margin-bottom: 0
+            &:nth-child(5)
+                margin-left: 12px
+                margin-bottom: 0
+            &:nth-child(6)
+                margin-right: 0
+                margin-bottom: 0
 
         &__card-icon
-            height: 100px
 
         &__card-head
             margin-top: 20px
