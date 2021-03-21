@@ -2,12 +2,10 @@ import 'normalize.css'
 import './sass/main.sass'
 // import './sass/modal.sass'
 
-// import html from './index.html'
-
 import './js/metriks/googleMetrika'
 import './js/metriks/yandexMetrika'
-import './js/careSlides'
 import modal from './js/modal'
+
 import Swiper from 'swiper/bundle'
 import 'swiper/swiper-bundle.css'
 
