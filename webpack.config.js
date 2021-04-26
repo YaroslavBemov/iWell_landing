@@ -228,7 +228,7 @@ module.exports = {
             {
                 test: /\.ts$/,
                 exclude: /node_modules/,
-                loader: {
+                use: {
                     loader: 'babel-loader',
                     options: babelOptions('@babel/preset-typescript')
                 }
@@ -236,7 +236,7 @@ module.exports = {
             {
                 test: /\.jsx$/,
                 exclude: /node_modules/,
-                loader: {
+                use: {
                     loader: 'babel-loader',
                     options: babelOptions('@babel/preset-react')
                 }
