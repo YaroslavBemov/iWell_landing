@@ -1,0 +1,63 @@
+.shedule
+  background-color: $primary-bg-white
+  &__width
+    width: $media-desktop
+    margin: 0 auto 100px
+  &__title
+    display: block
+    width: 100%
+    @include primary-h3-text
+    padding: 0 0 40px 0
+  &__list
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    margin: 0 0 (40px - 24px) 0
+
+  &__block
+    width: 344px
+    padding: 20px
+    background: $primary-bg-light-green
+    border-radius: 5px
+    margin: 0 0 24px 0
+
+  &__name
+    display: block
+    @include primary-h3-text(#236640)
+    font-weight: 500
+    width: 100%
+    text-align: left
+    position: relative
+    padding: 0 0 10px 0
+    margin: 0 0 20px 0
+    border-bottom: 1px solid $tertiary-dark-grey
+    &::after
+      content: ''
+      position: absolute
+      right: 0
+      top: 10px
+      width: 50px
+      height: 20px
+      background: url('../img/arrow-to-right-icon.svg') no-repeat
+
+  &__work
+    list-style-type: none
+    width: 100%
+
+    &__item
+      @include tertiary-h4($primary-text-grey)
+
+  &__continue
+    display: block
+    width: 100%
+    text-align: center
+    @include secondary-h3($primary-text-grey)
+    text-decoration: none
+
+@media (max-width: $media-desktop)
+  .shedule__width
+    width: 100%
+  .shedule__list
+    justify-content: center
