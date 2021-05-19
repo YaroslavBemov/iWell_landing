@@ -1,42 +1,66 @@
 .care
-    padding: 80px
-    @include pltc
+    @include padding-around
     background-color: $primary-bg-white
 
     &__heading
-        @include primary-h2
-        color: $primary-text-grey
+        @include secondary-h3()
 
     &__container
-        margin-top: 60px
-        display: flex
-        justify-content: space-between
+        //margin-top: 60px
+        //display: flex
+        //justify-content: space-between
 
     &__checks
-        display: flex
-        flex-direction: column
+        padding: 0
         border: none
+
+        //display: flex
+        //flex-direction: column
 
     &__input
         display: none
-        &:checked + .care__label > .care__arrow
-            transform: translateX(0px)
-        &:checked + .care__label > .care__arrow + span
-            transform: translateX(0px)
-        &:checked + .care__label
-            border-bottom: 2px solid $tertiary-green_01
+
+        //&:checked + .care__label > .care__arrow
+        //    transform: translateX(0px)
+        //&:checked + .care__label > .care__arrow + span
+        //    transform: translateX(0px)
+        //&:checked + .care__label
+        //    border-bottom: 2px solid $tertiary-green_01
 
     &__label
-        width: 420px
-        padding: 20px 0
-        border-bottom: 1px solid $tertiary-dark-grey
-        @include primary-h3-text
+        display: inline-block
+        margin-top: 40px
+
+    &__text-main
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 24px
         color: $primary-text-grey
-        cursor: pointer
-        transition: border-bottom-color .3s ease-in-out
-        overflow: hidden
+
+    &__text
+        margin-top: 17px
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 24px
+        color: $primary-text-grey
+        //@include tertiary-h4
+        //margin-top: 20px
+        //@include primary-h3-text
+        //color: $primary-text-grey
+
+        //width: 420px
+        //padding: 20px 0
+        //border-bottom: 1px solid $tertiary-dark-grey
+        //@include primary-h3-text
+        //color: $primary-text-grey
+        //cursor: pointer
+        //transition: border-bottom-color .3s ease-in-out
+        //overflow: hidden
 
     &__arrow
+        display: none
         margin-right: 20px
         display: inline-block
         transform: translateX(-60px)
@@ -49,13 +73,108 @@
     &__arrow-img
 
     &__slides
-
-    &__slide
         display: none
 
-    &__img
+    &__slide .care__text
 
-    &__text
-        margin-top: 20px
-        @include primary-h3-text
-        color: $primary-text-grey
+    &__img
+        //display: none
+
+
+@media (min-width: $media-tablet)
+    .care
+        padding: 60px 30px
+
+        &__heading
+            font-style: normal
+            font-weight: 500
+            font-size: 64px
+            line-height: 64px
+
+        &__label
+            font-style: normal
+            font-weight: 500
+            font-size: 24px
+            line-height: 36px
+
+        &__text-main
+            font-style: normal
+            font-weight: 500
+            font-size: 24px
+            line-height: 36px
+
+        &__text
+            font-style: normal
+            font-weight: normal
+            font-size: 24px
+            line-height: 36px
+
+
+@media (min-width: $media-desktop)
+    .care
+        padding: 80px 0 320px
+        @include padding-left-right-calc(1200px)
+
+        &__heading
+            @include primary-h2()
+
+        &__checks
+            position: relative
+            margin-top: 60px
+
+        &__input
+            &:checked + .care__label > .care__arrow
+                transform: translateX(0px)
+            &:checked + .care__label > .care__arrow + span
+                transform: translateX(0px)
+            &:checked + .care__label
+                border-bottom: 2px solid $tertiary-green_01
+
+            &:checked + .care__label + .care__text
+                opacity: 1
+            &:checked + .care__label + .care__text
+                opacity: 1
+            &:checked + .care__label + .care__text
+                opacity: 1
+
+        &__label
+            width: 430px
+            padding: 20px 0
+            margin-top: 0
+            display: block
+            border-bottom: 1px solid $tertiary-dark-grey
+            @include primary-h3-text
+            cursor: pointer
+            transition: border-bottom-color .3s ease-in-out
+            overflow: hidden
+
+        &__arrow
+            width: 50px
+            height: 20px
+            background: url('../img/arrow-to-right-icon.svg') no-repeat
+            margin-right: 20px
+            display: inline-block
+            transform: translateX(-60px)
+            transition: transform .5s ease-in-out, opacity .5s
+            & + span
+                display: inline-block
+                transform: translateX(-60px)
+                transition: transform.5s ease-in-out, opacity .5s
+
+        &__text
+            opacity: 0
+            position: absolute
+            right: 0
+            top: 0
+            margin-top: 0
+            padding-top: 390px
+            max-width: 690px
+            @include primary-h3-text
+            transition: opacity .5s ease-in-out
+
+    #person-img
+        background: no-repeat url('../img/workout-with-personal-trainer.jpg')
+    #coach-img
+        background: no-repeat url('../img/professional-trainer.jpg')
+    #gift-img
+        background: no-repeat url('../img/gift.jpg')

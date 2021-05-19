@@ -1,20 +1,89 @@
 .top
-	padding: 0 16px 309px
-	background-image: url('../img/main-girl-copy.png'), linear-gradient(to right, #528b6a, #a8ceb9)
-	//TODO element
-	//url('../img/Эллемент.png'),
-	@include bgi(bottom)
+	padding-bottom: calc(100vw + 20px)
+	background-image: url('../img/main-girl-640.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+	//TODO url('../img/circles-icon.png')
+	@include bg-img(bottom)
+
+	@include retina($media-mobile)
+		background-image: url('../img/main-girl-768.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+
+	&__logo
+		position: absolute
+		top: 16px
+		left: 50%
+		transform: translateX(-50%)
+		&-img
+			width: 29px
+			height: 22px
+			margin-right: 5px
+		&-text
+			width: 55px
+			height: 22px
 
 	&__heading
-		margin: 40px 0 0
+		margin: 40px 16px 0
 		@include secondary-h2($primary-text-white)
 
 	&__text
-		margin-top: 20px
+		margin: 20px 16px 0
 		@include secondary-h3($primary-text-white)
 
 	&__link-arrow
 		display: inline-block
-		margin-top: 40px
+		margin: 40px 0 0 16px
 		@include link-arrow
 		@include tertiary-h4($primary-text-white)
+
+
+@media (min-width: $media-tablet)
+	.top
+		padding-bottom: calc(55vw + 20px)
+		background: right bottom/65% no-repeat url('../img/main-girl-1024.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+
+		&__logo
+			top: 25px
+			&-img
+				width: 40px
+				height: 30px
+			&-text
+				width: 65px
+				height: 30px
+
+		&__heading
+			margin: 60px 170px 0 30px
+			@include primary-h1($primary-text-white)
+
+		&__text
+			margin: 40px 30px 0 30px
+			@include secondary-h2($primary-text-white)
+
+		&__link-arrow
+			margin: 40px auto 0 30px
+			@include secondary-h3($primary-text-white)
+
+		@include retina($media-tablet)
+			background: right bottom/65% no-repeat url('../img/main-girl-1366.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+
+@media (min-width: $media-desktop)
+	.top
+		padding-bottom: 167px
+		@include padding-left-right-calc($content)
+		background: 50vw bottom/700px no-repeat url('../img/main-girl-1024.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+
+		&__logo
+			top: 28px
+			left: 0
+			transform: translateX(0)
+
+		&__heading
+			margin: 133px 0 0
+			max-width: 714px
+			@include primary-h1
+
+		&__text
+			margin: 40px 0 0
+			max-width: 588px
+			@include secondary-h2($primary-text-white)
+
+		&__link-arrow
+			margin: 70px 0 0

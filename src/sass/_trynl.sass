@@ -1,0 +1,169 @@
+.trynl
+    @include padding-around
+    background-color: $primary-bg-white
+
+    &__heading
+        @include secondary-h3
+
+    &__content
+        margin-top: 35px
+        display: flex
+        flex-direction: column
+
+    &__form
+        display: flex
+        flex-direction: column
+
+    &__form-heading
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 24px
+        color: $primary-text-grey
+
+    &__form-input
+        margin-top: 17px
+        padding: 10px
+        border: none
+        border-bottom: 1px solid #4C4C4C
+        @include tertiary-h4
+        background-color: $primary-bg-white
+
+        &-text
+
+        &-tel
+
+    &__form-btn
+        margin: 17px auto 0
+        display: inline-block
+        @include link-arrow
+        @include tertiary-h4
+        border: 2px solid #FF5026
+
+    &__form-text-small
+        margin-top: 20px
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 18px
+        color: $primary-text-grey
+
+    &__feedback
+        margin-top: 40px
+
+    &__feedback-heading
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 24px
+        color: $primary-text-grey
+
+    &__feedback-link
+        margin-top: 19px
+        display: flex
+        align-items: center
+        @include primary-h3-text
+        text-decoration: none
+
+    &__feedback-link-icon
+        width: 40px
+        height: 40px
+        margin-right: 10px
+
+
+@media (min-width: $media-tablet)
+    .trynl
+        padding: 60px 30px
+
+        &__heading
+            font-style: normal
+            font-weight: 500
+            font-size: 64px
+            line-height: 72px
+
+        &__form
+            align-items: flex-start
+
+        &__form-heading
+            margin-top: 40px
+            font-style: normal
+            font-weight: 450
+            font-size: 24px
+            line-height: 36px
+
+        &__form-input
+            width: 460px
+            margin-top: 30px
+            padding: 20px
+            font-style: normal
+            font-weight: 400
+            font-size: 24px
+            line-height: 36px
+
+        &__form-btn
+            margin: 54px 0 0
+            font-style: normal
+            font-weight: 500
+            font-size: 24px
+            line-height: 36px
+
+        &__form-text-small
+            margin-top: 20px
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 24px
+
+        &__feedback-heading
+            margin-top: 40px
+            font-style: normal
+            font-weight: 450
+            font-size: 24px
+            line-height: 36px
+
+        &__feedback-link
+            font-style: normal
+            font-weight: 450
+            font-size: 24px
+            line-height: 36px
+
+
+@media (min-width: $media-desktop)
+    .trynl
+        padding: 80px 0
+        @include padding-left-right-calc
+
+        &__heading
+            @include primary-h2
+
+        &__content
+            margin-top: 40px
+            flex-direction: row
+            justify-content: space-between
+
+        &__form
+            flex-basis: 500px
+
+        &__form-heading
+            @include primary-h3-text
+
+        &__form-input
+            @include primary-h3-text
+
+        &__form-btn
+            padding: 14px
+            margin-top: 40px
+            @include secondary-h3
+
+        &__form-text-small
+            @include tertiary-h4
+
+        &__feedback
+            margin-top: 0
+            flex-basis: 500px
+
+        &__feedback-heading
+            @include primary-h3-text
+
+        &__feedback-link-icon
+            margin-right: 20px

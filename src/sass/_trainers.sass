@@ -1,59 +1,173 @@
 .trainers
-    padding: 80px
-    @include pltc
+    @include padding-around()
     background-color: $primary-bg-white
 
     &__heading
-        @include primary-h2
-        color: $primary-text-grey
+        @include secondary-h3
+
+    &__swiper-container
+        margin-top: 40px
+        max-width: 340px
+        //height: 360px
+
+    &__swiper-wrapper
+
+    &__swiper-slide
+        display: flex
+        flex-direction: column
+        border-radius: 5px
+        overflow: hidden
+
+    &__arrow
+        display: block
+        margin-left: auto
+
+    &__swiper-pagination
+
+    &__swiper-button-prev
+        color: $tertiary-light-grey
+
+    &__swiper-button-next
+        color: $tertiary-light-grey
+
+    &__swiper-scrollbar
 
     &__cards
-        margin-top: 80px
-        display: flex
-        gap: 40px
 
     &__card
 
     &__card-img
-        border-radius: 5px
+        max-width: 384px
+        max-height: 384px
+        //border-radius: 5px
 
     &__card-head
-        margin-top: 30px
-        padding-bottom: 10px
-        display: flex
-        align-items: center
-        border-bottom: 1px solid $tertiary-dark-grey
+        padding: 16px 0 10px
+        border-bottom: 1px solid #9EAEA4
 
     &__card-name
-        @include secondary-h2
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 24px
         color: $primary-text-grey
 
     &__card-link
-        @include secondary-h3
-        color: $secondary-text-orange
-        text-decoration: none
-        border: 2px solid $secondary-text-orange
-        border-radius: 5px
-        padding: 6px 16px
 
     &__card-body
         padding-top: 10px
 
     &__card-type
-        @include secondary-h3
-        text-align: left
-        color: $primary-text-grey
+        @include tertiary-h4
 
     &__card-rating
-        margin-top: 10px
-        @include secondary-h3
-        text-align: left
-        color: $primary-text-grey
+        @include tertiary-h4
+        background-image: url('../img/start-small-icon.svg')
+        background-repeat: no-repeat
+        background-position: 30px center
+
+    &__card-rating-icon
+        //margin-left: 6px
 
     &__arrows
-        margin: 100px auto 0
-        display: flex
-        justify-content: center
-        gap: 60px
 
     &__arrow
+
+
+@media (min-width: $media-tablet)
+    .trainers
+        padding: 60px 30px
+
+        &__heading
+            font-style: normal
+            font-weight: 500
+            font-size: 64px
+            line-height: 64px
+
+        &__swiper-container
+            margin-top: 60px
+            max-width: 711px
+            //overflow: visible
+
+        &__card-head
+            padding-top: 30px
+
+        &__card-name
+            font-style: normal
+            font-weight: 500
+            font-size: 36px
+            line-height: 48px
+
+        &__card-type
+            font-style: normal
+            font-weight: 500
+            font-size: 24px
+            line-height: 36px
+
+        &__card-rating
+            font-style: normal
+            font-weight: 500
+            font-size: 24px
+            line-height: 36px
+            background-position: 40px center
+
+
+@media (min-width: $media-desktop)
+    .trainers
+        padding: 80px 0
+        @include padding-left-right-calc($content)
+        background-color: $primary-bg-white
+
+        &__heading
+            font-style: normal
+            font-weight: 500
+            font-size: 64px
+            line-height: 64px
+            //@include primary-h2
+
+        &__swiper-container
+            max-width: $content
+            margin-top: 80px
+
+        &__cards
+            //margin-top: 80px
+            //display: flex
+
+        &__card
+
+        &__card-img
+            //border-radius: 5px
+
+        &__card-head
+            margin-top: 30px
+            //padding-bottom: 10px
+            //display: flex
+            //align-items: center
+            //border-bottom: 1px solid $tertiary-dark-grey
+
+        &__card-name
+            @include secondary-h2
+
+        &__card-link
+
+        &__card-body
+            //padding-top: 10px
+
+        &__card-type
+            @include secondary-h3
+            //text-align: left
+            //color: $primary-text-grey
+
+        &__card-rating
+            //margin-top: 10px
+            @include secondary-h3
+            align-items: center
+            //text-align: left
+            //color: $primary-text-grey
+
+        &__arrows
+            //margin: 100px auto 0
+            //display: flex
+            //justify-content: center
+
+        &__arrow
