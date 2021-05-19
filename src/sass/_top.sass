@@ -14,30 +14,26 @@
 
 	&__logo
 		position: absolute
-		top: 16px
+		//top: 16px
 		left: 50%
 		transform: translateX(-50%)
 		&-img
-			width: 29px
-			height: 22px
-			margin-right: 5px
-		&-text
-			width: 55px
-			height: 22px
+			width: 82px
+			height: 46px
 
 	&__heading
 		margin: 40px 16px 0
-		@include secondary-h2($primary-text-white)
+		@include primary-h3()
 
 	&__text
-		margin: 20px 16px 0
-		@include secondary-h3($primary-text-white)
+		margin: 10px 16px 0
+		@include primary-text-h3-bold()
 
 	&__link-arrow
 		display: inline-block
-		margin: 40px 0 0 16px
-		@include link-arrow
-		@include tertiary-h4($primary-text-white)
+		margin: 24px 0 0 16px
+		@include link-arrow($primary-text-white)
+		@include secondary-text-h3-bold($primary-text-white)
 
 
 @media (min-width: $media-tablet)
@@ -48,25 +44,18 @@
 		background-size: 80%, auto, contain
 
 		&__logo
-			top: 25px
-			&-img
-				width: 40px
-				height: 30px
-			&-text
-				width: 65px
-				height: 30px
+			top: 9px
 
 		&__heading
-			margin: 60px 170px 0 30px
-			@include primary-h1($primary-text-white)
+			margin: 80px 30px 0 30px
+			@include primary-h1-bold()
 
 		&__text
-			margin: 40px 30px 0 30px
-			@include secondary-h2($primary-text-white)
+			margin: 20px 30px 0 30px
+			@include primary-text-h3()
 
 		&__link-arrow
 			margin: 40px auto 0 30px
-			@include secondary-h3($primary-text-white)
 
 		//@include retina($media-tablet)
 			//background: right bottom/65% no-repeat url('../img/wellness-490.png'), linear-gradient(to right, #528b6a, #a8ceb9)
@@ -80,19 +69,21 @@
 		background-size: 40%, auto, contain
 
 		&__logo
-			top: 28px
+			top: 0
 			left: 0
 			transform: translateX(0)
 
+			&-img
+				width: 162px
+				height: 93px
+
 		&__heading
-			margin: 133px 0 0
-			max-width: 714px
-			@include primary-h1
+			margin: 137px 0 0
+			max-width: 452px
+			@include primary-h1-bold()
 
 		&__text
-			margin: 40px 0 0
-			max-width: 588px
-			@include secondary-h2($primary-text-white)
+			margin: 20px 0 0
 
 		&__link-arrow
-			margin: 70px 0 0
+			margin: 80px 0 0

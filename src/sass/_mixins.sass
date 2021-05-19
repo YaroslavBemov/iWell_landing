@@ -1,5 +1,5 @@
 /* Text primary */
-@mixin primary-h1($text-color: $secondary-green)
+@mixin primary-h1($text-color: $primary-text-white)
     font-style: normal
     font-weight: 500
     font-size: 48px
@@ -7,32 +7,15 @@
     letter-spacing: 0.44px
     color: $text-color
 
-@mixin primary-h2($text-color: $secondary-green)
-    font-style: normal
-    font-weight: 500
-    font-size: 48px
-    line-height: 64px
-    letter-spacing: 0.44px
-    color: $text-color
-
-@mixin primary-h3-text($text-color: $primary-text-grey)
-    font-style: normal
-    font-weight: 400
-    font-size: 24px
-    line-height: 36px
-    letter-spacing: 0.44px
-    color: $text-color
-
-@mixin primary-h3-bold($text-color: $primary-text-grey)
+@mixin primary-h1-bold($text-color: $primary-text-white)
     font-style: normal
     font-weight: 700
-    font-size: 24px
-    line-height: 36px
+    font-size: 48px
+    line-height: 64px
     letter-spacing: 0.44px
     color: $text-color
 
-/* Text secondary */
-@mixin secondary-h2($text-color: $primary-text-grey)
+@mixin primary-h2($text-color: $primary-text-white)
     font-style: normal
     font-weight: 500
     font-size: 36px
@@ -40,7 +23,48 @@
     letter-spacing: 0.44px
     color: $text-color
 
-@mixin secondary-h3($text-color: $primary-text-grey)
+@mixin primary-h3($text-color: $primary-text-white)
+    font-style: normal
+    font-weight: 700
+    font-size: 28px
+    line-height: 36px
+    letter-spacing: 0.44px
+    color: $text-color
+
+@mixin primary-text-h3($text-color: $primary-text-white)
+    font-style: normal
+    font-weight: 500
+    font-size: 24px
+    line-height: 48px
+    letter-spacing: 0.44px
+    color: $text-color
+
+@mixin primary-text-h3-bold($text-color: $primary-text-white)
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    line-height: 24px
+    letter-spacing: 0.44px
+    color: $text-color
+
+/* Text secondary */
+@mixin secondary-h1($text-color: $secondary-green)
+    font-style: normal
+    font-weight: 500
+    font-size: 48px
+    line-height: 64px
+    letter-spacing: 0.44px
+    color: $text-color
+
+@mixin secondary-h3-bold($text-color: $secondary-green)
+    font-style: normal
+    font-weight: 600
+    font-size: 24px
+    line-height: 30px
+    letter-spacing: 0.44px
+    color: $text-color
+
+@mixin secondary-text-h2($text-color: $primary-text-grey)
     font-style: normal
     font-weight: 500
     font-size: 24px
@@ -48,12 +72,37 @@
     letter-spacing: 0.44px
     color: $text-color
 
+@mixin secondary-text-h2-bold($text-color: $primary-text-grey)
+    font-style: normal
+    font-weight: 700
+    font-size: 24px
+    line-height: 36px
+    letter-spacing: 0.44px
+    color: $text-color
+
+@mixin secondary-text-h3($text-color: $primary-text-grey)
+    font-style: normal
+    font-weight: 400
+    font-size: 18px
+    line-height: 24px
+    letter-spacing: 0.44px
+    color: $text-color
+
+@mixin secondary-text-h3-bold($text-color: $primary-text-grey)
+    font-style: normal
+    font-weight: 600
+    font-size: 18px
+    line-height: 24px
+    letter-spacing: 0.44px
+    color: $text-color
+
 /* Text tertiary */
 @mixin tertiary-h4($text-color: $primary-text-grey)
     font-style: normal
-    font-weight: normal
+    font-weight: 400
     font-size: 18px
     line-height: 24px
+    letter-spacing: 0.44px
     color: $text-color
 
 /* Other */
@@ -69,9 +118,9 @@
     padding-left: calc(50% - #{$content / 2})
     padding-right: calc(50% - #{$content / 2})
 
-@mixin link-arrow()
+@mixin link-arrow($border-color: $secondary-text-orange)
     padding: 14px 16px
-    border: 2px solid #FFFFFF
+    border: 2px solid $border-color
     border-radius: 5px
     text-decoration: none
 
