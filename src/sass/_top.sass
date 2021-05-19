@@ -1,11 +1,16 @@
 .top
-	padding-bottom: calc(100vw + 20px)
-	background-image: url('../img/main-girl-640.png'), linear-gradient(to right, #528b6a, #a8ceb9)
-	//TODO url('../img/circles-icon.png')
-	@include bg-img(bottom)
+	padding-bottom: 100vw
+	//TODO размер и расположение изображения
+	background-image: url('../img/wellness-248.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+	background-position: bottom 60px center, bottom
+	background-repeat: no-repeat
+	background-size: 90%, auto, contain
+	//background: 90%, auto, contain / bottom 60px center no-repeat url('../img/wellness-248.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+
+	//@include bg-img(bottom)
 
 	@include retina($media-mobile)
-		background-image: url('../img/main-girl-768.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+		background-image: url('../img/wellness-490.png'), linear-gradient(to right, #528b6a, #a8ceb9)
 
 	&__logo
 		position: absolute
@@ -37,8 +42,10 @@
 
 @media (min-width: $media-tablet)
 	.top
-		padding-bottom: calc(55vw + 20px)
-		background: right bottom/65% no-repeat url('../img/main-girl-1024.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+		//padding-bottom: calc(55vw + 20px)
+		//background: right bottom/65% no-repeat url('../img/wellness-490.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+		//background-position: bottom 60px center, bottom
+		background-size: 80%, auto, contain
 
 		&__logo
 			top: 25px
@@ -61,14 +68,16 @@
 			margin: 40px auto 0 30px
 			@include secondary-h3($primary-text-white)
 
-		@include retina($media-tablet)
-			background: right bottom/65% no-repeat url('../img/main-girl-1366.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+		//@include retina($media-tablet)
+			//background: right bottom/65% no-repeat url('../img/wellness-490.png'), linear-gradient(to right, #528b6a, #a8ceb9)
 
 @media (min-width: $media-desktop)
 	.top
 		padding-bottom: 167px
 		@include padding-left-right-calc($content)
-		background: 50vw bottom/700px no-repeat url('../img/main-girl-1024.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+		//background: 50vw bottom/700px no-repeat url('../img/wellness-490.png'), linear-gradient(to right, #528b6a, #a8ceb9)
+		background-position: bottom 60px right 10%, bottom
+		background-size: 40%, auto, contain
 
 		&__logo
 			top: 28px

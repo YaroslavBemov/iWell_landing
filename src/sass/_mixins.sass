@@ -1,13 +1,13 @@
 /* Text primary */
-@mixin primary-h1($text-color: $primary-text-white)
+@mixin primary-h1($text-color: $secondary-green)
     font-style: normal
     font-weight: 500
-    font-size: 64px
-    line-height: 72px
+    font-size: 48px
+    line-height: 64px
     letter-spacing: 0.44px
     color: $text-color
 
-@mixin primary-h2($text-color: $primary-text-grey)
+@mixin primary-h2($text-color: $secondary-green)
     font-style: normal
     font-weight: 500
     font-size: 48px
@@ -62,8 +62,8 @@
 
 @mixin bg-img($pos1: center, $pos2: center, $size: contain)
     background-repeat: no-repeat
-    background-size: $size
     background-position: $pos2 $pos1    //Поменял местами позиции
+    background-size: $size
 
 @mixin padding-left-right-calc($content: 1200px)
     padding-left: calc(50% - #{$content / 2})
