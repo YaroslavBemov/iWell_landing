@@ -3,49 +3,62 @@
     background-color: $primary-bg-white
 
     &__heading
-        @include secondary-h3
+        @include secondary-h3-bold()
 
-    &__swiper-container
-        margin-top: 40px
-        max-width: 340px
-        //height: 350px
+    &__container
+        display: flex
+        flex-wrap: wrap
+        gap: 10px
 
-    &__swiper-wrapper
-
-    &__swiper-slide
-        //max-width: calc(100vw - 60px)
+    &__item
+        margin-top: 26px
         display: flex
         flex-direction: column
-        border-radius: 5px
-        overflow: hidden
+        flex: 1 1 288px
 
-    &__card-img
-        
-    &__arrow
-        display: block
-        margin-left: auto
+    &__item-img
+        width: 288px
+        height: 288px
+        align-self: center
 
-    &__card-heading
+    &__item-heading
         margin-top: 16px
-        font-style: normal
-        font-weight: 500
-        font-size: 18px
-        line-height: 24px
-        color: $primary-text-grey
+        @include secondary-text-h3-bold()
 
-    &__card-text
+    &__item-text
         margin-top: 10px
-        @include tertiary-h4
+        @include secondary-text-h3()
 
-    &__swiper-pagination
 
-    &__swiper-button-prev
-        color: $tertiary-light-grey
+    //&__swiper-container
+    //    margin-top: 40px
+    //    max-width: 340px
+    //    //height: 350px
+    //
+    //&__swiper-wrapper
+    //
+    //&__swiper-slide
+    //    //max-width: calc(100vw - 60px)
+    //    display: flex
+    //    flex-direction: column
+    //    border-radius: 5px
+    //    overflow: hidden
+    //
+    //&__card-img
+    //
+    //&__arrow
+    //    display: block
+    //    margin-left: auto
 
-    &__swiper-button-next
-        color: $tertiary-light-grey
+    //&__swiper-pagination
 
-    &__swiper-scrollbar
+    //&__swiper-button-prev
+    //    color: $tertiary-light-grey
+    //
+    //&__swiper-button-next
+    //    color: $tertiary-light-grey
+
+    //&__swiper-scrollbar
 
 
 @media (min-width: $media-tablet)
@@ -53,43 +66,43 @@
         padding: 60px 30px
 
         &__heading
-            font-style: normal
-            font-weight: 500
-            font-size: 64px
-            line-height: 72px
+            @include secondary-h1()
 
-        &__card-heading
-            font-style: normal
-            font-weight: bold
-            font-size: 24px
-            line-height: 36px
+        &__container
+            gap: 28px
 
-        &__card-text
-            font-style: normal
-            font-weight: 450
-            font-size: 24px
-            line-height: 36px
+        &__item
+            flex: 1 1 340px
 
-        &__swiper-container
-            margin-top: 10px
-            max-width: none
-            margin-left: 0
-            margin-right: 0
+        &__item-heading
+            @include secondary-text-h2-bold()
 
-        &__swiper-wrapper
-            flex-wrap: wrap
-            justify-content: space-evenly
+        &__item-text
+            @include secondary-text-h3()
 
-        &__swiper-slide
-            margin-top: 30px
-            flex-basis: 340px
-
-        &__swiper-button-prev
-            display: none
-
-        &__swiper-button-next
-            display: none
-
+        //&__swiper-container
+        //    margin-top: 10px
+        //    max-width: none
+        //    margin-left: 0
+        //    margin-right: 0
+        //
+        //&__swiper-wrapper
+        //    flex-wrap: wrap
+        //    justify-content: space-evenly
+        //
+        //&__swiper-slide
+        //    margin-top: 30px
+        //    flex-basis: 340px
+        //
+        //&__swiper-button-prev
+        //    display: none
+        //
+        //&__swiper-button-next
+        //    display: none
+@media (min-width: 1130px)
+    .fyway
+        &__item
+            flex: 1 1 362px
 
 @media (min-width: $media-desktop)
     .fyway
@@ -99,10 +112,17 @@
         &__heading
             //@include primary-h2
 
-        &__swiper-container
-            margin-top: 50px
-            //margin: 80px 0
-            //display: none
+        &__container
+            flex-wrap: nowrap
+            gap: 10px
+
+        &__item
+            flex: 1 1 273px
+
+        //&__swiper-container
+        //    margin-top: 50px
+        //    //margin: 80px 0
+        //    //display: none
 
         &__cards
             //margin-top: 80px
@@ -113,14 +133,14 @@
         &__card
             //flex-basis: 340px
 
-        &__card-img
+        &__item-img
 
-        &__card-heading
+        &__item-heading
             //position: static
             //margin-top: 20px
             //@include primary-h3-bold
 
-        &__card-text
+        &__item-text
             //position: static
             //margin-top: 16px
             //@include primary-h3-text
