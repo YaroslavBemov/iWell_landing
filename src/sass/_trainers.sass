@@ -3,7 +3,7 @@
     background-color: $primary-bg-white
 
     &__heading
-        @include secondary-h3
+        @include secondary-h3-bold()
 
     &__swiper-container
         margin-top: 40px
@@ -43,7 +43,7 @@
 
     &__card-head
         padding: 16px 0 10px
-        border-bottom: 1px solid #9EAEA4
+        border-bottom: 1px solid $secondary-text-orange
 
     &__card-name
         font-style: normal
@@ -58,10 +58,15 @@
         padding-top: 10px
 
     &__card-type
-        @include tertiary-h4
+        font-style: normal
+        font-weight: 700
+        font-size: 18px
+        line-height: 24px
+        color: $primary-text-grey
 
     &__card-rating
-        @include tertiary-h4
+        margin-top: 10px
+        //@include tertiary-h4
         background-image: url('../img/start-small-icon.svg')
         background-repeat: no-repeat
         background-position: 30px center
@@ -79,10 +84,7 @@
         padding: 60px 30px
 
         &__heading
-            font-style: normal
-            font-weight: 500
-            font-size: 64px
-            line-height: 64px
+            @include secondary-h1()
 
         &__swiper-container
             margin-top: 60px
@@ -93,22 +95,13 @@
             padding-top: 30px
 
         &__card-name
-            font-style: normal
-            font-weight: 500
-            font-size: 36px
-            line-height: 48px
+            @include secondary-text-h2()
 
         &__card-type
-            font-style: normal
-            font-weight: 500
-            font-size: 24px
-            line-height: 36px
+            @include secondary-text-h2-bold()
 
         &__card-rating
-            font-style: normal
-            font-weight: 500
-            font-size: 24px
-            line-height: 36px
+            @include secondary-text-h2()
             background-position: 40px center
 
 
@@ -119,10 +112,10 @@
         background-color: $primary-bg-white
 
         &__heading
-            font-style: normal
-            font-weight: 500
-            font-size: 64px
-            line-height: 64px
+            //font-style: normal
+            //font-weight: 500
+            //font-size: 64px
+            //line-height: 64px
             //@include primary-h2
 
         &__swiper-container
@@ -146,7 +139,7 @@
             //border-bottom: 1px solid $tertiary-dark-grey
 
         &__card-name
-            @include secondary-h2
+            //@include secondary-h2
 
         &__card-link
 
@@ -154,13 +147,13 @@
             //padding-top: 10px
 
         &__card-type
-            @include secondary-h3
+            //@include secondary-h3
             //text-align: left
             //color: $primary-text-grey
 
         &__card-rating
             //margin-top: 10px
-            @include secondary-h3
+            //@include secondary-h3
             align-items: center
             //text-align: left
             //color: $primary-text-grey
