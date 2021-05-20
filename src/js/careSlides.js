@@ -24,6 +24,7 @@ function getCheckedId (selector) {
 function showBlock(selector, id) {
     const slides = document.querySelectorAll(selector)
     const slideId = id + '-slide'
+    console.log(slides)
 
     slides.forEach(item => {
         if (item.id === slideId) {
