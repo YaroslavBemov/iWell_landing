@@ -66,6 +66,8 @@
         margin: 10px 0 30px
         @include secondary-text-h3()
         & + ul
+            @include secondary-text-h3()
+            list-style-position: inside
             list-style-type: '❖ '
             margin-bottom: 30px
 
@@ -75,31 +77,23 @@
         padding: 60px 30px
 
         &__heading
-            font-style: normal
-            font-weight: 500
-            font-size: 64px
-            line-height: 64px
+            @include secondary-h1()
 
         &__card-head
-            font-style: normal
-            font-weight: bold
-            font-size: 24px
-            line-height: 36px
+            @include secondary-text-h2-bold()
 
         &__card-text
-            font-style: normal
-            font-weight: 450
-            font-size: 24px
-            line-height: 36px
+            @include secondary-text-h3()
+
+        &__link-arrow
+            margin-left: 40px
+            transform: translateX(0)
 
 
 @media (min-width: $media-desktop)
     .hiworks
         padding: 80px 0
         @include padding-left-right-calc(1200px)
-
-        &__heading
-            @include secondary-h1()
 
         &__container
 
@@ -137,7 +131,7 @@
         &__card-content
 
         &__card-head
-            @include secondary-text-h3-bold()
+            @include secondary-text-h2-bold()
 
         &__card-text
             @include secondary-text-h3()
