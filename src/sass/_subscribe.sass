@@ -3,19 +3,19 @@
     background-color: $primary-bg-white
 
     &__heading
-        @include secondary-h3
+        @include secondary-h3-bold()
 
     &__cards
         margin-top: 30px
         display: flex
         flex-wrap: wrap
-        justify-content: space-between
+        justify-content: space-evenly
+        gap: 16px
 
     &__card
-        margin: 15px 8px
         padding: 18px 10px
-        flex-basis: 110px
-        flex-grow: 1
+        flex: 0 1 110px
+
         //height: 397px
         //width: 283px
         //padding: 50px 0
@@ -27,18 +27,20 @@
         //background-image: url('../img/pattern.svg')
         //@include bg-img(right)
         //background-position: center top
-        &:nth-child(1)
-            margin-top: 0
-            margin-left: 0
-        &:nth-child(2)
-            margin-top: 0
-            margin-right: 0
-        &:nth-child(3)
-            margin-bottom: 0
-            margin-left: 0
-        &:nth-child(4)
-            margin-bottom: 0
-            margin-right: 0
+        //&:nth-child(1)
+        //    margin-top: 0
+        //    margin-left: 0
+        //&:nth-child(2)
+        //    margin-top: 0
+        //    margin-right: 0
+        //&:nth-child(3)
+        //    margin-bottom: 0
+        //    margin-left: 0
+        //&:nth-child(4)
+        //    margin-bottom: 0
+        //    margin-right: 0
+        &:last-child
+            display: none
 
     &__card-heading
         display: none
@@ -87,9 +89,16 @@
         font-weight: normal
         font-size: 14px
         line-height: 18px
-        @include link-arrow
+        @include link-arrow($primary-text-white)
         padding: 6px 8px
         color: $primary-text-white
+
+    &__ps
+        margin-top: 10px
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 18px
 
 
 @media (min-width: $media-tablet)
@@ -107,34 +116,25 @@
             justify-content: space-evenly
 
         &__card
-            margin: 20px
-            padding: 50px 20px
-            flex-basis: 283px
-            flex-grow: 0
-
+            padding: 20px 20px
+            flex: 0 1 220px
         &__card-heading
             display: block
-            font-style: normal
-            font-weight: bold
-            font-size: 24px
-            line-height: 36px
-            text-align: center
-            letter-spacing: 0.44px
-            color: $primary-text-white
+            @include secondary-text-h2-bold($primary-text-white)
 
         &__card-count
-            margin-top: 30px
+            //margin-top: 30px
             font-style: normal
             font-weight: 450
             font-size: 24px
             line-height: 36px
 
         &__card-gift
-            margin-top: 8px
+            //margin-top: 8px
             font-style: normal
             font-weight: 500
-            font-size: 36px
-            line-height: 48px
+            font-size: 24px
+            line-height: 36px
 
         &__card-price
             margin-top: 27px
@@ -144,11 +144,15 @@
             line-height: 48px
 
         &__card-link
-            margin-top: 16px
+            margin-top: 10px
             font-style: normal
             font-weight: 500
             font-size: 24px
             line-height: 36px
+
+        &__ps
+            font-size: 14px
+            line-height: 21px
 
 
 @media (min-width: $media-desktop)
@@ -158,7 +162,7 @@
         //background-color: $primary-bg-white
 
         &__heading
-            @include primary-h2
+            //@include primary-h2
             //color: $primary-text-grey
 
         &__cards
@@ -167,10 +171,9 @@
             //justify-content: space-between
 
         &__card
-            margin: 12px
             //height: 397px
             //width: 283px
-            padding: 50px 0
+            padding: 20px 0
             //display: flex
             //flex-direction: column
             //justify-content: space-between
@@ -179,27 +182,34 @@
             //background-image: url('../img/Vector.png')
             ////@include bgi
             //background-position: center top
-            &:nth-child(1)
-                margin: 0
-            &:nth-child(2)
-                margin: 0
-            &:nth-child(3)
-                margin: 0
-            &:nth-child(4)
-                margin: 0
+            //&:nth-child(1)
+            //    margin: 0
+            //&:nth-child(2)
+            //    margin: 0
+            //&:nth-child(3)
+            //    margin: 0
+            //&:nth-child(4)
+            //    margin: 0
+            &:last-child
+                display: flex
+
+            &:last-child .subscribe__card-link
+                color: rgba(248, 242, 236, 0.5)
+                border: 2px solid rgba(248, 242, 236, 0.5)
 
         &__card-heading
             display: block
-            @include primary-h3-bold($primary-text-white)
+            //@include primary-h3-bold($primary-text-white)
 
         &__card-count
-            @include primary-h3-text($primary-text-white)
+            //@include primary-h3-text($primary-text-white)
             //text-align: center
 
         &__card-gift
-            @include secondary-h2($primary-text-white)
+            //@include secondary-h2($primary-text-white)
 
         &__card-price
+            margin-top: 27px
             font-style: normal
             font-weight: 500
             font-size: 36px
@@ -209,6 +219,9 @@
             //color: $primary-text-white
 
         &__card-link
-            @include link-arrow
-            @include secondary-h3($primary-text-white)
+            //@include link-arrow
+            //@include secondary-h3($primary-text-white)
             padding: 10px
+
+        &__ps
+            display: none
