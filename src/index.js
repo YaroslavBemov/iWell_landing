@@ -84,3 +84,28 @@ const trainersSwiper = new Swiper('.swiper-container.trainers__swiper-container'
         }
     }
 })
+
+const recallSwiper = new Swiper('.swiper-container.recall__swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    // lazy: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next.recall__swiper-button-next',
+        prevEl: '.swiper-button-prev.recall__swiper-button-prev'
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 31
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 39
+        }
+    }
+})

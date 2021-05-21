@@ -1,0 +1,152 @@
+.recall
+    @include padding-around()
+    background-color: $primary-bg-white
+
+    &__heading
+        @include secondary-h3-bold()
+
+    &__swiper-container
+        margin-top: 40px
+        max-width: 340px
+        //height: 360px
+
+    &__swiper-wrapper
+
+    &__swiper-slide
+        display: flex
+        flex-direction: column
+        border-radius: 5px
+        overflow: hidden
+
+    &__arrow
+        display: block
+        margin-left: auto
+
+    &__swiper-pagination
+
+    &__swiper-button-prev
+        color: $tertiary-light-grey
+
+    &__swiper-button-next
+        color: $tertiary-light-grey
+
+    &__swiper-scrollbar
+
+    &__cards
+
+    &__card
+
+    &__card-img
+        max-width: 384px
+        max-height: 384px
+        //border-radius: 5px
+
+    &__card-head
+        padding: 16px 0 10px
+        border-bottom: 1px solid $secondary-text-orange
+
+    &__card-name
+        font-style: normal
+        font-weight: 600
+        font-size: 18px
+        line-height: 24px
+        letter-spacing: 0.44px
+        color: $primary-text-grey
+
+    &__card-link
+
+    &__card-body
+        padding-top: 10px
+
+    &__card-text
+        font-style: normal
+        font-weight: 450
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.44px
+        color: $primary-text-grey
+
+
+    &__arrows
+
+    &__arrow
+
+
+@media (min-width: $media-tablet)
+    .recall
+        padding: 60px 30px
+
+        &__heading
+            @include secondary-h1()
+
+        &__swiper-container
+            margin-top: 60px
+            max-width: 711px
+            //overflow: visible
+
+        &__card-head
+            padding-top: 30px
+
+        &__card-name
+            font-size: 24px
+            line-height: 27px
+
+        &__card-text
+            font-size: 18px
+            line-height: 27px
+
+
+@media (min-width: $media-desktop)
+    .recall
+        padding: 80px 0
+        @include padding-left-right-calc($content)
+        background-color: $primary-bg-white
+
+        &__heading
+            //font-style: normal
+            //font-weight: 500
+            //font-size: 64px
+            //line-height: 64px
+            //@include primary-h2
+
+        &__swiper-container
+            max-width: $content
+            margin-top: 80px
+
+        &__cards
+            //margin-top: 80px
+            //display: flex
+
+        &__card
+
+        &__card-img
+            //border-radius: 5px
+
+        &__card-head
+            margin-top: 30px
+            //padding-bottom: 10px
+            //display: flex
+            //align-items: center
+            //border-bottom: 1px solid $tertiary-dark-grey
+
+        &__card-name
+            font-size: 24px
+            line-height: 27px
+
+        &__card-link
+
+        &__card-body
+            //padding-top: 10px
+
+        &__card-text
+            //@include secondary-h3
+            //text-align: left
+            //color: $primary-text-grey
+
+
+        &__arrows
+            //margin: 100px auto 0
+            //display: flex
+            //justify-content: center
+
+        &__arrow
