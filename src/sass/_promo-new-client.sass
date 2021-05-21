@@ -1,0 +1,59 @@
+.promo-new-client
+    @include padding-around
+    background-color: $secondary-text-green
+
+    &__heading
+        @include secondary-h3-bold($primary-text-white)
+
+    &__text
+        margin-top: 26px
+        @include secondary-text-h3($primary-text-white)
+        font-size: 16px
+
+    &__link
+        margin-top: 26px
+        display: inline-block
+        @include link-arrow($primary-text-white)
+        color: $primary-text-white
+        margin-left: 50%
+        transform: translateX(-50%)
+
+@media (min-width: $media-tablet)
+    .promo-new-client
+        padding: 60px 30px
+
+        &__heading
+            font-style: normal
+            font-weight: 500
+            font-size: 48px
+            line-height: 64px
+
+        &__text
+            margin-top: 40px
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            line-height: 27px
+
+        &__link
+            margin-top: 26px
+            margin-left: 0
+            display: inline-block
+            @include link-arrow($primary-text-white)
+            color: $primary-text-white
+            transform: translateX(0)
+            font-style: normal
+            font-weight: bold
+            font-size: 18px
+            line-height: 36px
+
+@media (min-width: $media-desktop)
+    .promo-new-client
+        padding: 80px 0
+        @include padding-left-right-calc
+
+        &__heading
+
+        &__text
+
+        &__link
