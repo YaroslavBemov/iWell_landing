@@ -1,9 +1,9 @@
-.trynl
+.feedback
     @include padding-around
-    background-color: $primary-bg-white
+    background-color: $secondary-text-green
 
     &__heading
-        @include secondary-h3
+        @include secondary-h3-bold($primary-text-white)
 
     &__content
         margin-top: 35px
@@ -15,20 +15,19 @@
         flex-direction: column
 
     &__form-heading
-        font-style: normal
-        font-weight: 500
-        font-size: 18px
-        line-height: 24px
-        color: $primary-text-grey
+        @include secondary-text-h3()
+        color: $primary-text-white
 
     &__form-input
         margin-top: 17px
         padding: 10px
         border: none
-        border-bottom: 1px solid #4C4C4C
-        @include tertiary-h4
-        background-color: $primary-bg-white
-
+        border-bottom: 1px solid $primary-text-white
+        //@include tertiary-h4
+        background-color: $secondary-text-green
+        color: $primary-text-white
+        &::-webkit-input-placeholder
+            color: $primary-text-white
         &-text
 
         &-tel
@@ -36,17 +35,21 @@
     &__form-btn
         margin: 17px auto 0
         display: inline-block
-        @include link-arrow
-        @include tertiary-h4
-        border: 2px solid #FF5026
+        @include link-arrow($primary-text-white)
+        font-style: normal
+        font-weight: bold
+        font-size: 18px
+        line-height: 24px
+        background-color: $secondary-text-green
+        color: $primary-text-white
 
     &__form-text-small
         margin-top: 20px
         font-style: normal
         font-weight: normal
-        font-size: 14px
+        font-size: 12px
         line-height: 18px
-        color: $primary-text-grey
+        color: $primary-text-white
 
     &__feedback
         margin-top: 40px
@@ -56,14 +59,16 @@
         font-weight: 500
         font-size: 18px
         line-height: 24px
-        color: $primary-text-grey
+        color: $primary-text-white
 
     &__feedback-link
         margin-top: 19px
         display: flex
         align-items: center
-        @include primary-h3-text
+        font-size: 16px
+        line-height: 24px
         text-decoration: none
+        color: $primary-text-white
 
     &__feedback-link-icon
         width: 40px
@@ -72,14 +77,14 @@
 
 
 @media (min-width: $media-tablet)
-    .trynl
+    .feedback
         padding: 60px 30px
 
         &__heading
             font-style: normal
             font-weight: 500
-            font-size: 64px
-            line-height: 72px
+            font-size: 48px
+            line-height: 64px
 
         &__form
             align-items: flex-start
@@ -121,20 +126,37 @@
             font-size: 24px
             line-height: 36px
 
+        &__feedback-link-box
+            padding-right: 200px
+            display: flex
+            flex-wrap: wrap
+
         &__feedback-link
+            flex: 0 1 250px
             font-style: normal
             font-weight: 450
             font-size: 24px
             line-height: 36px
+            &:nth-child(1)
+                order: 1
+            &:nth-child(2)
+                order: 3
+            &:nth-child(3)
+                order: 2
+            &:nth-child(4)
+                order: 4
 
+@media (min-width: 1010px) and (max-width: 1199px)
+    .feedback__feedback-link-box
+        padding-right: 390px
 
 @media (min-width: $media-desktop)
-    .trynl
+    .feedback
         padding: 80px 0
         @include padding-left-right-calc
 
         &__heading
-            @include primary-h2
+            //@include primary-h2
 
         &__content
             margin-top: 40px
@@ -145,25 +167,35 @@
             flex-basis: 500px
 
         &__form-heading
-            @include primary-h3-text
+            //@include primary-h3-text
 
         &__form-input
-            @include primary-h3-text
+            //@include primary-h3-text
 
         &__form-btn
             padding: 14px
             margin-top: 40px
-            @include secondary-h3
+            //@include secondary-h3
 
         &__form-text-small
-            @include tertiary-h4
+            //@include tertiary-h4
 
         &__feedback
             margin-top: 0
             flex-basis: 500px
 
         &__feedback-heading
-            @include primary-h3-text
+            //@include primary-h3-text
+
+        &__feedback-link
+            &:nth-child(1)
+                order: 1
+            &:nth-child(2)
+                order: 2
+            &:nth-child(3)
+                order: 3
+            &:nth-child(4)
+                order: 4
 
         &__feedback-link-icon
             margin-right: 20px
