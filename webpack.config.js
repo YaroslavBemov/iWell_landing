@@ -103,13 +103,25 @@ const plugins = () => {
         }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
-            // {
-            //     from: path.resolve(__dirname, 'src/img'),
-            //     to: path.resolve(__dirname, 'dist/img')
-            // },
+            {
+                from: path.resolve(__dirname, 'src/icons'),
+                to: path.resolve(__dirname, 'dist/icons')
+            },
             {
                 from: path.resolve(__dirname, 'src/actions'),
                 to: path.resolve(__dirname, 'dist/actions')
+            },
+            {
+                from: path.resolve(__dirname, 'src/site.webmanifest'),
+                to: path.resolve(__dirname, 'dist')
+            },
+            {
+                from: path.resolve(__dirname, 'src/browserconfig.xml'),
+                to: path.resolve(__dirname, 'dist')
+            },
+            {
+                from: path.resolve(__dirname, 'src/favicon.ico'),
+                to: path.resolve(__dirname, 'dist')
             }
         ]),
         new MiniCssExtractPlugin({
