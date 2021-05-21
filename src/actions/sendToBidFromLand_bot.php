@@ -12,13 +12,13 @@ $phone = test_input($_POST['phone']);
 if (!empty($action) && $action === 'bid') {
 
     if (empty($name)) {
-        $nameErr = 'Name is empty.';
+        $nameErr = 'Имя не указано.';
     } elseif (!preg_match("/^[\s\w]*$/u", $name)) {
         $nameErr = "Мы первый раз видим такое имя, пожалуйста, используйте буквы.";
     }
 
     if (empty($phone)) {
-        $phoneErr = 'Phone is empty.';
+        $phoneErr = 'Телефон не указан.';
     } elseif (!preg_match("/^[\d\s\S]*$/", $phone)) {
         $phoneErr = "Для указания номера телефона используйте цифры.";
     }
