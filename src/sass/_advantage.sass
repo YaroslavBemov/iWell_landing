@@ -3,60 +3,55 @@
     background-color: $primary-bg-white
 
     &__heading
-        @include secondary-h3
+        @include secondary-h3-bold()
 
     &__cards
         margin-top: 40px
         display: flex
-        justify-content: space-between
+        justify-content: space-evenly
         flex-wrap: wrap
+        gap: 16px
 
     &__card
-        margin: 7px
-        padding: 14px 10px 8px
+        padding: 14px 12px
         display: flex
         flex-direction: column
         align-items: center
-        //justify-content: space-between
-        flex-basis: 110px
-        flex-grow: 1
+        //justify-content: space-evenly
+        flex: 0 0 110px
         background-color: $primary-bg-light_green
         border-radius: 5px
-        &:nth-child(1)
-            margin-top: 0
-            margin-left: 0
-        &:nth-child(2)
-            margin-top: 0
-            margin-right: 0
-        &:nth-child(3)
-            margin-left: 0
-        &:nth-child(4)
-            margin-right: 0
-        &:nth-child(5)
-            margin-bottom: 0
-            margin-left: 0
-        &:nth-child(6)
-            margin-bottom: 0
-            margin-right: 0
 
     &__card-icon
         width: 35px
         height: 35px
 
     &__card-head
-        font-size: 14px
+        margin-top: 7px
+        font-style: normal
+        font-weight: bold
+        font-size: 16px
         line-height: 18px
         text-align: center
-        margin-top: 7px
         letter-spacing: 0.44px
         color: $primary-text-grey
+        &-desktop
+            display: none
 
     &__card-text
+        margin-top: 7px
+        font-style: normal
+        font-weight: normal
         font-size: 14px
         line-height: 18px
         text-align: center
-        margin-top: 7px
         color: $primary-text-grey
+        &-desktop
+          display: none
+
+@media (min-width: 615px) and (max-width: 767px)
+    .advantage__cards
+        padding: 0 76px
 
 
 @media (min-width: $media-tablet)
@@ -64,18 +59,15 @@
         padding: 60px 30px
 
         &__heading
-            font-style: normal
-            font-weight: 500
-            font-size: 64px
-            line-height: 64px
-            letter-spacing: 0.44px
+            @include secondary-h1()
 
         &__cards
 
         &__card
             margin: 9px
             padding: 40px 10px
-            flex-basis: 320px
+            flex: 0 0 300px
+
 
         &__card-icon
             width: 92px
@@ -87,6 +79,10 @@
             font-weight: bold
             font-size: 24px
             line-height: 36px
+            &-desktop
+                display: block
+            &-mobile
+                display: none
 
         &__card-text
             margin-top: 16px
@@ -94,6 +90,10 @@
             font-weight: normal
             font-size: 18px
             line-height: 24px
+            &-desktop
+                display: block
+            &-mobile
+                display: none
 
 
 @media (min-width: $media-desktop)
@@ -102,42 +102,20 @@
         @include padding-left-right-calc($content)
 
         &__heading
-            @include primary-h2()
+            //@include primary-h2()
 
         &__cards
             margin-top: 60px
 
         &__card
-            margin: 12px
             padding: 40px 30px
-            flex-basis: 320px
-            &:nth-child(1)
-                margin-left: 0
-                margin-top: 0
-            &:nth-child(2)
-                margin-right: 12px
-                margin-top: 0
-            &:nth-child(3)
-                margin-left: 12px
-                margin-right: 0
-                margin-top: 0
-            &:nth-child(4)
-                margin-right: 12px
-                margin-left: 0
-                margin-bottom: 0
-            &:nth-child(5)
-                margin-left: 12px
-                margin-bottom: 0
-            &:nth-child(6)
-                margin-right: 0
-                margin-bottom: 0
 
         &__card-icon
 
         &__card-head
             margin-top: 20px
-            @include primary-h3-bold()
+            //@include primary-h3-bold()
 
         &__card-text
             margin-top: 16px
-            @include tertiary-h4()
+            //@include tertiary-h4()
