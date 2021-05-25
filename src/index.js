@@ -79,8 +79,8 @@ const trainersSwiper = new Swiper('.swiper-container.trainers__swiper-container'
             spaceBetween: 31
         },
         1200: {
-            slidesPerView: 3,
-            spaceBetween: 39
+            slidesPerView: 4,
+            spaceBetween: 23
         }
     }
 })
