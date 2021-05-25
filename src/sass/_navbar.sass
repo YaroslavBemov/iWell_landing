@@ -1,135 +1,180 @@
-//.header
-//    background-color: #fff
-//    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1)
-//    position: fixed
-//    width: 100%
-//    z-index: 3
-//
-//
-//    & ul
-//        margin: 0
-//        padding: 0
-//        list-style: none
-//        overflow: hidden
-//        background-color: #fff
-//
-//
-//    & li a
-//        display: block
-//        padding: 20px 20px
-//        border-right: 1px solid #f4f4f4
-//        text-decoration: none
-//
-//
-//    & li a:hover
-//        background-color: #ded9d9
-//
-//    & .menu-btn:hover
-//        background-color: #ded9d9
-//
-//    & .logo
-//        display: block
-//        float: left
-//        font-size: 25px
-//        padding: 12px 20px
-//        text-decoration: none
-//
-//
-//
-//
-//    & .menu
-//        clear: both
-//        max-height: 0
-//        transition: max-height .2s ease-out
-//
-//
-//
-//    & .menu-icon
-//        cursor: pointer
-//        display: inline-block
-//        float: right
-//        padding: 28px 20px
-//        position: relative
-//        user-select: none
-//
-//
-//    & .menu-icon .navicon
-//        background: #333
-//        display: block
-//        height: 2px
-//        position: relative
-//        transition: background .2s ease-out
-//        width: 18px
-//
-//
-//    & .menu-icon .navicon:before
-//        background: #333
-//        content: ''
-//        display: block
-//        height: 100%
-//        position: absolute
-//        transition: all .2s ease-out
-//        width: 100%
-//    & .menu-icon .navicon:after
-//        background: #333
-//        content: ''
-//        display: block
-//        height: 100%
-//        position: absolute
-//        transition: all .2s ease-out
-//        width: 100%
-//
-//
-//    & .menu-icon .navicon:before
-//        top: 5px
-//
-//
-//    & .menu-icon .navicon:after
-//        top: -5px
-//
-//
-//
-//    & .menu-btn
-//        display: none
-//
-//
-//    & .menu-btn:checked ~ .menu
-//        max-height: 240px
-//
-//
-//    & .menu-btn:checked ~ .menu-icon .navicon
-//        background: transparent
-//
-//
-//    & .menu-btn:checked ~ .menu-icon .navicon:before
-//        transform: rotate(-45deg)
-//
-//
-//    & .menu-btn:checked ~ .menu-icon .navicon:after
-//        transform: rotate(45deg)
-//
-//
-//    & .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before
-//        top: 0
-//
-//    & .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after
-//        top: 0
-//
-//
-//
-//@media (min-width: 768px)
-//    & li
-//        float: left
-//
-//    & li a
-//        padding: 20px 30px
-//
-//    & .menu
-//        clear: none
-//        float: right
-//        max-height: none
-//
-//    & .menu-icon
-//        display: none
+.header
+    //background-color: #fff
+    background-image: linear-gradient(to right, #528b6a, #a8ceb9)
+    position: fixed
+    width: 100%
+    z-index: 3
+
+    & .logo
+        display: block
+        float: left
+        padding: 12px 20px 6px
+        position: absolute
+        z-index: 5
+        & img
+            width: 66px
+            height: 37px
+
+    & ul
+        margin: 0
+        padding: 0
+        list-style: none
+        overflow: hidden
+        background-color: $primary-bg-gray
+
+    & li a
+        display: block
+        padding: 20px 20px
+        text-decoration: none
+        font-style: normal
+        font-weight: 600
+        font-size: 18px
+        line-height: 24px
+        color: $primary-text-white
+
+    & li a:hover
+        color: $secondary-text-orange-hover
+
+    & .menu-btn:hover
+        background-color: #ded9d9
+
+    & .menu
+        clear: both
+        max-height: 0
+        transition: background-color .2s ease-out
+
+    & .menu-icon
+        cursor: pointer
+        display: inline-block
+        float: right
+        padding: 28px 20px
+        position: relative
+        z-index: 5
+        user-select: none
+
+    &__link-box
+        display: flex
+        justify-content: space-around
+        margin-top: 20px
+        &-link
+            &-icon
+                width: 40px
+                height: 40px
+
+    & .menu-icon .navicon
+        background: $primary-bg-white
+        display: block
+        height: 2px
+        position: relative
+        transition: background .2s ease-out
+        width: 18px
+
+
+    & .menu-icon .navicon:before
+        background: $primary-bg-white
+        content: ''
+        display: block
+        height: 100%
+        position: absolute
+        transition: all .2s ease-out
+        width: 100%
+    & .menu-icon .navicon:after
+        background: $primary-bg-white
+        content: ''
+        display: block
+        height: 100%
+        position: absolute
+        transition: all .2s ease-out
+        width: 100%
+
+
+    & .menu-icon .navicon:before
+        top: 5px
+
+
+    & .menu-icon .navicon:after
+        top: -5px
+
+
+
+    & .menu-btn
+        display: none
+
+
+    & .menu-btn:checked ~ .menu
+        position: absolute
+        min-height: 100vh
+        top: 0px
+        bottom: 0
+        left: 0
+        right: 0
+        padding-top: 100px
+        display: flex
+        flex-direction: column
+
+    & .menu-btn:checked ~ .menu-icon .navicon
+        background: transparent
+
+
+    & .menu-btn:checked ~ .menu-icon .navicon:before
+        transform: rotate(-45deg)
+
+
+    & .menu-btn:checked ~ .menu-icon .navicon:after
+        transform: rotate(45deg)
+
+
+    & .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before
+        top: 0
+
+    & .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after
+        top: 0
+
+
+
+@media (min-width: $media-tablet)
+    .header
+
+        & .logo
+
+            & img
+                width: 82px
+                height: 46px
+
+        &__link-box
+            justify-content: flex-start
+            &-link
+                margin: 0 20px
+
+@media (min-width: $media-desktop)
+    .header
+        position: static
+        background: transparent
+        & .logo
+
+            & img
+                width: 162px
+                height: 91px
+
+        & li
+            float: left
+            font-style: normal
+            font-weight: 500
+            font-size: 18px
+            line-height: 24px
+
+        & li a
+            padding: 20px 30px
+
+        & .menu
+            max-height: none
+            background: transparent
+            display: flex
+            justify-content: flex-end
+        &__link-box
+            display: none
+
+        & .menu-icon
+            display: none
 
 
