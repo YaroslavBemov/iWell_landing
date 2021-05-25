@@ -1,5 +1,6 @@
 .hiworks
     @include padding-around
+    //@include padding-left-right-calc($media-mobile)
     background-color: $primary-bg-white
 
     &__heading
@@ -76,6 +77,9 @@
     .hiworks
         padding: 60px 30px
 
+        &__container
+            @include padding-left-right-calc($media-tablet)
+
         &__heading
             @include secondary-h1()
 
@@ -96,6 +100,7 @@
         @include padding-left-right-calc(1200px)
 
         &__container
+            @include padding-left-right-calc()
 
         &__img-box
 

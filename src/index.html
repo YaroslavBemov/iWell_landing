@@ -14,7 +14,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-<!--    <link rel="mask-icon" href="website_icon.svg" color="red">-->
+    <!--    <link rel="mask-icon" href="website_icon.svg" color="red">-->
 </head>
 
 <body>
@@ -297,8 +297,21 @@
 
         <!-- Slide 1 -->
         <div class="fyway__item">
-            <img src="./img/functional-training.jpg" loading="lazy" alt="functional-training"
+            <img srcset="./img/functional-training-680.jpg 680w,
+                        ./img/functional-training-576.jpg 576w"
+
+                 sizes=" (min-width: 1200px) 22vw,
+                        (min-width: 768px) 44vw,
+                        90vw"
+
+                 src="./img/functional-training-680.jpg"
+
+                 alt="functional-training"
                  class="fyway__item-img">
+
+
+            <!--            <img src="./img/functional-training.jpg" loading="lazy" alt="functional-training"-->
+            <!--                 class="fyway__item-img">-->
             <h3 class="fyway__item-heading">
                 Движение
             </h3>
@@ -310,7 +323,18 @@
 
         <!-- Slide 2 -->
         <div class="fyway__item">
-            <img src="./img/food.jpg" loading="lazy" alt="power-training" class="fyway__item-img">
+            <img srcset="./img/food-680.jpg 680w,
+                        ./img/food-576.jpg 576w"
+
+                 sizes=" (min-width: 1200px) 22vw,
+                        (min-width: 768px) 44vw,
+                        90vw"
+
+                 src="./img/food-680.jpg"
+
+                 alt="functional-training"
+                 class="fyway__item-img">
+<!--            <img src="./img/food.jpg" loading="lazy" alt="Food" class="fyway__item-img">-->
             <h3 class="fyway__item-heading">
                 Питание
             </h3>
@@ -321,7 +345,18 @@
 
         <!-- Slide 3 -->
         <div class="fyway__item">
-            <img src="./img/look.jpg" loading="lazy" alt="pilates" class="fyway__item-img">
+            <img srcset="./img/look-680.jpg 680w,
+                        ./img/look-576.jpg 576w"
+
+                 sizes=" (min-width: 1200px) 22vw,
+                        (min-width: 768px) 44vw,
+                        90vw"
+
+                 src="./img/look-680.jpg"
+
+                 alt="look"
+                 class="fyway__item-img">
+<!--            <img src="./img/look.jpg" loading="lazy" alt="pilates" class="fyway__item-img">-->
             <h3 class="fyway__item-heading">
                 Внешний образ
             </h3>
@@ -332,7 +367,18 @@
 
         <!-- Slide 4 -->
         <div class="fyway__item">
-            <img src="./img/psych.jpg" loading="lazy" alt="yoga" class="fyway__item-img">
+            <img srcset="./img/psych-680.jpg 680w,
+                        ./img/psych-576.jpg 576w"
+
+                 sizes=" (min-width: 1200px) 22vw,
+                        (min-width: 768px) 44vw,
+                        90vw"
+
+                 src="./img/psych-680.jpg"
+
+                 alt="psychology"
+                 class="fyway__item-img">
+<!--            <img src="./img/psych.jpg" loading="lazy" alt="yoga" class="fyway__item-img">-->
             <h3 class="fyway__item-heading">
                 Психология
             </h3>
@@ -579,7 +625,8 @@
         Знакомство с iWell по выгодной цене
     </h2>
     <p class="promo-new-client__text">
-        Воспользуйтесь нашим специальным предложением - <b>35 минут</b> занятий каждому новому участнику за <b>625 рублей!</b>
+        Воспользуйтесь нашим специальным предложением - <b>35 минут</b> занятий каждому новому участнику за <b>625
+        рублей!</b>
     </p>
     <a href="#feedback" class="promo-new-client__link">
         Попробовать
