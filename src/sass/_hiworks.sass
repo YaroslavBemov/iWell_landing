@@ -106,7 +106,10 @@
         &__img
             width: 492px
             height: 592px
-            background-image: url('../img/girl-on-sofa.jpg')
+            background-image: url('../img/girl-on-sofa-492.jpg')
+            background-size: cover
+            @include retina($media-desktop)
+                background-image: url('../img/girl-on-sofa-984.jpg')
 
         &__link-arrow
             margin-top: 40px
