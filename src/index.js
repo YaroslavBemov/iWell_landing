@@ -105,7 +105,7 @@ const recallSwiper = new Swiper('.swiper-container.recall__swiper-container', {
         },
         1200: {
             slidesPerView: 3,
-            spaceBetween: 39
+            spaceBetween: 25
         }
     }
 })
