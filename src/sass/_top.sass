@@ -11,15 +11,6 @@
 	@include retina($media-mobile)
 		background-image: url('../img/wellness.svg'), linear-gradient(to right, #528b6a, #a8ceb9)
 
-	&__logo
-		position: absolute
-		//top: 16px
-		left: 50%
-		transform: translateX(-50%)
-		&-img
-			width: 82px
-			height: 46px
-
 	&__heading
 		margin: 40px 16px 0
 		@include primary-h3()
@@ -27,6 +18,9 @@
 	&__text
 		margin: 10px 16px 0
 		@include primary-text-h3-bold()
+
+	&__list
+		display: none
 
 	&__link-arrow
 		display: inline-block
@@ -45,8 +39,7 @@
 		background-position: bottom 60px center, bottom
 		background-size: 80%, auto, contain
 
-		&__logo
-			top: 9px
+
 
 		&__heading
 			margin: 80px 30px 0 30px
@@ -55,6 +48,25 @@
 		&__text
 			margin: 20px 30px 0 30px
 			@include primary-text-h3()
+
+		&__list
+			display: initial
+			list-style-type: none
+			&-item
+				margin-left: 30px
+				margin-top: 11px
+				display: flex
+				align-items: center
+				font-style: normal
+				font-weight: 500
+				font-size: 18px
+				line-height: 22px
+				letter-spacing: 0.44px
+				color: #FFFFFF
+				&-img
+					width: 26px
+					height: 26px
+					margin-right: 10px
 
 		&__link-arrow
 			margin: 40px auto 0 30px
@@ -70,14 +82,7 @@
 		background-position: bottom 60px right calc(50% - 330px), bottom
 		background-size: 490px, 100%, contain
 
-		&__logo
-			top: 0
-			left: 0
-			transform: translateX(0)
 
-			&-img
-				width: 162px
-				height: 93px
 
 		&__heading
 			margin: 137px 0 0
@@ -86,6 +91,11 @@
 
 		&__text
 			margin: 20px 0 0
+		&__list
+			&-item
+				font-size: 14px
+				line-height: 17px
+				margin-left: 0
 
 		&__link-arrow
-			margin: 80px 0 0
+			margin: 30px 0 0
