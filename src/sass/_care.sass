@@ -152,10 +152,31 @@
             transition: opacity .5s ease-in-out
 
     #person-img
-        background: no-repeat url('../img/individual-approach.jpg')
+        border-radius: 5px
+        background-image: url('../img/individual-approach-690.jpg')
+        background-size: 690px 370px
+        background-repeat: no-repeat
     #coach-img
-        background: no-repeat url('../img/professional-trainer.jpg')
+        border-radius: 5px
+        background-image: url('../img/professional-trainer-690.jpg')
+        background-size: 690px 370px
+        background-repeat: no-repeat
     #time-img
-        background: no-repeat url('../img/choose-time.jpg')
+        border-radius: 5px
+        background-image: url('../img/choose-time-690.jpg')
+        background-size: 690px 370px
+        background-repeat: no-repeat
     #gift-img
-        background: no-repeat url('../img/gift.jpg')
+        border-radius: 5px
+        background-image: url('../img/gift-690.jpg')
+        background-size: 690px 370px
+        background-repeat: no-repeat
+    @include retina($media-desktop)
+        #person-img
+            background-image: url('../img/individual-approach-1380.jpg')
+        #coach-img
+            background-image: url('../img/professional-trainer-1380.jpg')
+        #time-img
+            background-image: url('../img/choose-time-1380.jpg')
+        #gift-img
+            background-image: url('../img/gift-1380.jpg')

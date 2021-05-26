@@ -13,7 +13,7 @@
     &__link
         margin-top: 26px
         display: inline-block
-        @include link-arrow($primary-text-white)
+        @include link-arrow-mobile($primary-text-white)
         color: $primary-text-white
         margin-left: 50%
         transform: translateX(-50%)
@@ -42,7 +42,7 @@
             margin-top: 26px
             margin-left: 0
             display: inline-block
-            @include link-arrow($primary-text-white)
+            @include link-arrow-tablet($primary-text-white)
             color: $primary-text-white
             transform: translateX(0)
             font-style: normal
@@ -60,3 +60,4 @@
         &__text
 
         &__link
+            @include link-arrow-desktop($primary-text-white)

@@ -118,8 +118,62 @@
     padding-left: calc(50% - #{$content / 2})
     padding-right: calc(50% - #{$content / 2})
 
-@mixin link-arrow($border-color: $secondary-text-orange)
-    padding: 14px 16px
+@mixin link-arrow-mobile($border-color: $secondary-text-orange)
+    width: 232px
+    height: 48px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 2px solid $border-color
+    border-radius: 5px
+    text-decoration: none
+
+@mixin link-arrow-mobile-sm($border-color: $secondary-text-orange)
+    width: 86px
+    height: 28px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 2px solid $border-color
+    border-radius: 5px
+    text-decoration: none
+
+@mixin link-arrow-tablet($border-color: $secondary-text-orange)
+    width: 260px
+    height: 56px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 2px solid $border-color
+    border-radius: 5px
+    text-decoration: none
+
+@mixin link-arrow-tablet-sm($border-color: $secondary-text-orange)
+    width: 164px
+    height: 48px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 2px solid $border-color
+    border-radius: 5px
+    text-decoration: none
+
+@mixin link-arrow-desktop($border-color: $secondary-text-orange)
+    width: 260px
+    height: 56px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 2px solid $border-color
+    border-radius: 5px
+    text-decoration: none
+
+@mixin link-arrow-desktop-sm($border-color: $secondary-text-orange)
+    width: 164px
+    height: 48px
+    display: flex
+    justify-content: center
+    align-items: center
     border: 2px solid $border-color
     border-radius: 5px
     text-decoration: none

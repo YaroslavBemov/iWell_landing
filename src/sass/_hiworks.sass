@@ -19,7 +19,7 @@
         display: inline-block
         margin-left: 50%
         transform: translateX(-50%)
-        @include link-arrow()
+        @include link-arrow-mobile()
         @include secondary-text-h3-bold($secondary-text-orange)
         &:hover
             border-color: $secondary-text-orange-hover
@@ -94,6 +94,7 @@
 
         &__link-arrow
             margin-left: 40px
+            @include link-arrow-tablet()
             transform: translateX(0)
 
 
@@ -121,6 +122,7 @@
 
         &__link-arrow
             margin-top: 40px
+            @include link-arrow-desktop()
             //display: inline-block
             //@include link-arrow
             //@include secondary-text-h3-bold()
