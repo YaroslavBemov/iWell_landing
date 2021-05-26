@@ -8,20 +8,29 @@
     &__container
         display: flex
         flex-wrap: wrap
-        gap: 10px
+        justify-content: center
+        //gap: 10px
 
     &__item
-        margin-top: 26px
+        max-width: 576px
+        margin: 26px 8px
         display: flex
-        flex-direction: column
         flex: 1 1 288px
-        @include padding-left-right-calc($media-mobile)
+        flex-direction: column
+        &:nth-child(1) > div
+            background-image: url("../img/functional-training-680.jpg")
+        &:nth-child(2) > div
+            background-image: url("../img/food-680.jpg")
+        &:nth-child(3) > div
+            background-image: url("../img/look-680.jpg")
+        &:nth-child(4) > div
+            background-image: url("../img/psych-680.jpg")
 
     &__item-img
-        width: 288px
         height: 288px
-        align-self: center
         border-radius: 5px
+        background-repeat: no-repeat
+        background-size: cover
 
     &__item-heading
         margin-top: 16px
@@ -32,37 +41,6 @@
         @include secondary-text-h3()
 
 
-    //&__swiper-container
-    //    margin-top: 40px
-    //    max-width: 340px
-    //    //height: 350px
-    //
-    //&__swiper-wrapper
-    //
-    //&__swiper-slide
-    //    //max-width: calc(100vw - 60px)
-    //    display: flex
-    //    flex-direction: column
-    //    border-radius: 5px
-    //    overflow: hidden
-    //
-    //&__card-img
-    //
-    //&__arrow
-    //    display: block
-    //    margin-left: auto
-
-    //&__swiper-pagination
-
-    //&__swiper-button-prev
-    //    color: $tertiary-light-grey
-    //
-    //&__swiper-button-next
-    //    color: $tertiary-light-grey
-
-    //&__swiper-scrollbar
-
-
 @media (min-width: $media-tablet)
     .fyway
         padding: 60px 30px
@@ -71,12 +49,10 @@
             @include secondary-h1()
 
         &__container
-            gap: 28px
+            //gap: 28px
 
         &__item
-            flex: 1 1 340px
-            padding-left: 0
-            padding-right: 0
+            flex: 1 1 330px
 
         &__item-heading
             @include secondary-text-h2-bold()
@@ -85,32 +61,13 @@
             @include secondary-text-h3()
 
         &__item-img
-            width: 340px
             height: 340px
 
-        //&__swiper-container
-        //    margin-top: 10px
-        //    max-width: none
-        //    margin-left: 0
-        //    margin-right: 0
-        //
-        //&__swiper-wrapper
-        //    flex-wrap: wrap
-        //    justify-content: space-evenly
-        //
-        //&__swiper-slide
-        //    margin-top: 30px
-        //    flex-basis: 340px
-        //
-        //&__swiper-button-prev
-        //    display: none
-        //
-        //&__swiper-button-next
-        //    display: none
-@media (min-width: 1130px)
+
+@media (min-width: 1090px)
     .fyway
         &__item
-            flex: 1 1 362px
+            flex: 1 1 370px
 
 @media (min-width: $media-desktop)
     .fyway
@@ -122,37 +79,24 @@
 
         &__container
             flex-wrap: nowrap
-            gap: 10px
+            //gap: 10px
 
         &__item
             flex: 1 1 273px
 
         &__item-img
-            width: 273px
             height: 273px
 
-        //&__swiper-container
-        //    margin-top: 50px
-        //    //margin: 80px 0
-        //    //display: none
+
 
         &__cards
-            //margin-top: 80px
-            //display: flex
-            //flex-wrap: wrap
-            //justify-content: space-around
 
         &__card
-            //flex-basis: 340px
 
         &__item-img
 
         &__item-heading
-            //position: static
-            //margin-top: 20px
             @include landing-h4()
 
         &__item-text
-            //position: static
-            //margin-top: 16px
             @include landing-h6()
