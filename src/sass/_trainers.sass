@@ -70,7 +70,7 @@
         //@include tertiary-h4
         background-image: url('../img/start-small-icon.svg')
         background-repeat: no-repeat
-        background-position: 30px center
+        background-position: 10px center
 
     &__card-rating-icon
         //margin-left: 6px
@@ -121,7 +121,7 @@
             //font-weight: 500
             //font-size: 64px
             //line-height: 64px
-            //@include primary-h2
+            @include landing-h3()
 
         &__swiper-container
             max-width: $content
@@ -145,7 +145,7 @@
             //border-bottom: 1px solid $tertiary-dark-grey
 
         &__card-name
-            //@include secondary-h2
+            @include secondary-h3()
 
         &__card-link
 
@@ -153,13 +153,13 @@
             //padding-top: 10px
 
         &__card-type
-            //@include secondary-h3
+            @include landing-h4()
             //text-align: left
             //color: $primary-text-grey
 
         &__card-rating
             //margin-top: 10px
-            //@include secondary-h3
+            @include landing-h6()
             align-items: center
             //text-align: left
             //color: $primary-text-grey

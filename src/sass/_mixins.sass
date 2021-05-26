@@ -118,64 +118,172 @@
     padding-left: calc(50% - #{$content / 2})
     padding-right: calc(50% - #{$content / 2})
 
-@mixin link-arrow-mobile($border-color: $secondary-text-orange)
+/* Arrow */
+@mixin link-arrow-mobile($color: $primary-text-white)
     width: 232px
     height: 48px
+    padding-left: 16px
     display: flex
     justify-content: center
     align-items: center
-    border: 2px solid $border-color
-    border-radius: 5px
     text-decoration: none
+    //@include landing-h5($color)
+    background: no-repeat right center / 216px 48px url('../img/subtract.svg'), no-repeat left center / 26px 12px url('../img/arrow.svg')
+    &:hover
+        color: $secondary-text-orange-hover
 
-@mixin link-arrow-mobile-sm($border-color: $secondary-text-orange)
-    width: 86px
+@mixin link-arrow-mobile-orange($color: $secondary-text-orange)
+    width: 232px
+    height: 48px
+    padding-left: 16px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    //@include landing-h5($color)
+    background: no-repeat right center / 216px 48px url('../img/subtract-orange.svg'), no-repeat left center / 26px 12px url('../img/arrow-orange.svg')
+    &:hover
+        color: $secondary-text-orange-hover
+
+@mixin link-arrow-mobile-sm($color: $primary-text-white)
+    width: 95px
     height: 28px
+    padding-left: 9px
     display: flex
     justify-content: center
     align-items: center
-    border: 2px solid $border-color
-    border-radius: 5px
     text-decoration: none
+    //@include landing-h5($color)
+    background: no-repeat right center / 86px 28px url('../img/subtract.svg'), no-repeat left center / 14px 8px url('../img/arrow.svg')
+    &:hover
+        color: $secondary-text-orange-hover
 
-@mixin link-arrow-tablet($border-color: $secondary-text-orange)
+@mixin link-arrow-tablet($color: $primary-text-white)
     width: 260px
     height: 56px
+    padding-left: 21px
     display: flex
     justify-content: center
     align-items: center
-    border: 2px solid $border-color
-    border-radius: 5px
     text-decoration: none
+    @include landing-h5($color)
+    background: no-repeat right center / 239px 56px url('../img/subtract.svg'), no-repeat left center / 34px 14px url('../img/arrow.svg')
+    &:hover
+        color: $secondary-text-orange-hover
 
-@mixin link-arrow-tablet-sm($border-color: $secondary-text-orange)
-    width: 164px
-    height: 48px
-    display: flex
-    justify-content: center
-    align-items: center
-    border: 2px solid $border-color
-    border-radius: 5px
-    text-decoration: none
-
-@mixin link-arrow-desktop($border-color: $secondary-text-orange)
+@mixin link-arrow-tablet-orange($color: $secondary-text-orange)
     width: 260px
     height: 56px
+    padding-left: 21px
     display: flex
     justify-content: center
     align-items: center
-    border: 2px solid $border-color
-    border-radius: 5px
     text-decoration: none
+    @include landing-h5($color)
+    background: no-repeat right center / 239px 56px url('../img/subtract-orange.svg'), no-repeat left center / 34px 14px url('../img/arrow-orange.svg')
+    &:hover
+        color: $secondary-text-orange-hover
 
-@mixin link-arrow-desktop-sm($border-color: $secondary-text-orange)
+@mixin link-arrow-tablet-sm($color: $primary-text-white)
     width: 164px
     height: 48px
+    padding-left: 16px
     display: flex
     justify-content: center
     align-items: center
-    border: 2px solid $border-color
-    border-radius: 5px
     text-decoration: none
+    @include landing-h5($color)
+    background: no-repeat right center / 148px 48px url('../img/subtract.svg'), no-repeat left center / 25px 12px url('../img/arrow.svg')
+    &:hover
+        color: $secondary-text-orange-hover
 
-/* Media */
+@mixin link-arrow-desktop($color: $primary-text-white)
+    width: 260px
+    height: 56px
+    padding-left: 21px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    @include landing-h5($color)
+    background: no-repeat right center / 239px 56px url('../img/subtract.svg'), no-repeat left center / 34px 14px url('../img/arrow.svg')
+    &:hover
+        color: $secondary-text-orange-hover
+
+@mixin link-arrow-desktop-orange($color: $secondary-text-orange)
+    width: 260px
+    height: 56px
+    padding-left: 21px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    @include landing-h5($color)
+    background: no-repeat right center / 239px 56px url('../img/subtract-orange.svg'), no-repeat left center / 34px 14px url('../img/arrow-orange.svg')
+    &:hover
+        color: $secondary-text-orange-hover
+
+@mixin link-arrow-desktop-sm($color: $primary-text-white)
+    width: 164px
+    height: 48px
+    padding-left: 16px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    @include landing-h5($color)
+    background: no-repeat right center / 148px 48px url('../img/subtract.svg'), no-repeat left center / 25px 12px url('../img/arrow.svg')
+    &:hover
+        color: $secondary-text-orange-hover
+
+/* Landing */
+
+@mixin landing-h1($text-color: $primary-text-white)
+    color: $text-color
+    font-weight: bold
+    font-size: 48px
+    line-height: 48px
+    letter-spacing: 0.44px
+
+@mixin landing-h2($text-color: $primary-text-white)
+    color: $text-color
+    font-weight: 500
+    font-size: 36px
+    line-height: 48px
+    letter-spacing: 0.44px
+
+@mixin landing-h3($text-color: $secondary-green)
+    color: $text-color
+    font-weight: 500
+    font-size: 48px
+    line-height: 64px
+    letter-spacing: 0.44px
+
+@mixin landing-h4($text-color: $primary-text-grey)
+    color: $text-color
+    font-weight: 600
+    font-size: 24px
+    line-height: 36px
+    letter-spacing: 0.44px
+
+@mixin landing-h5($text-color: $primary-text-white)
+    color: $text-color
+    font-weight: bold
+    font-size: 18px
+    line-height: 24px
+    letter-spacing: 0.44px
+
+@mixin landing-h6($text-color: $primary-text-grey)
+    color: $text-color
+    font-weight: normal
+    font-size: 18px
+    line-height: 27px
+    letter-spacing: 0.44px
+
+/* Secondary heading */
+@mixin secondary-h3($text-color: $primary-text-grey)
+    color: $text-color
+    font-weight: 500
+    font-size: 24px
+    line-height: 36px
+    letter-spacing: 0.44px

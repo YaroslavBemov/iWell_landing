@@ -99,7 +99,7 @@
         @include padding-left-right-calc(1200px)
 
         &__heading
-            //@include primary-h2()
+            @include landing-h3()
 
         &__checks
             position: relative
@@ -148,8 +148,11 @@
             margin-top: 0
             padding-top: 390px
             width: 690px
-            //@include primary-h3-text
+            @include landing-h6()
             transition: opacity .5s ease-in-out
+
+        &__text-main
+            @include landing-h4()
 
     #person-img
         border-radius: 5px

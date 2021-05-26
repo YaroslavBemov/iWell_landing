@@ -26,12 +26,8 @@
 	&__link-arrow
 		display: inline-block
 		margin: 24px 0 0 16px
-		@include link-arrow-mobile($primary-text-white)
 		@include secondary-text-h3-bold($primary-text-white)
-		&:hover
-			border-color: $secondary-text-orange-hover
-			color: $secondary-text-orange-hover
-
+		@include link-arrow-mobile()
 
 @media (min-width: $media-tablet)
 	.top
@@ -90,16 +86,16 @@
 			margin: 0
 			padding-top: 150px
 			max-width: 588px
-			@include primary-h1-bold()
+			@include landing-h1()
 
 		&__text
 			margin: 20px 0 0
+			@include landing-h4($primary-text-white)
 		&__list
 			&-item
-				font-size: 14px
-				line-height: 17px
 				margin-left: 0
+				@include landing-h6($primary-text-white)
 
 		&__link-arrow
 			margin: 30px 0 0
-			@include link-arrow-desktop($primary-text-white)
+			@include link-arrow-desktop()

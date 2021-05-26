@@ -27,7 +27,7 @@
         background-color: $secondary-text-green
         color: $primary-text-white
         &::-webkit-input-placeholder
-            color: $primary-text-white
+            color: $tertiary-dark-grey
         &-text
 
         &-tel
@@ -160,7 +160,7 @@
         @include padding-left-right-calc
 
         &__heading
-            //@include primary-h2
+            @include landing-h3($primary-text-white)
 
         &__content
             margin-top: 40px
@@ -171,10 +171,7 @@
             flex-basis: 500px
 
         &__form-heading
-            //@include primary-h3-text
-
-        &__form-input
-            //@include primary-h3-text
+            @include landing-h4($primary-text-white)
 
         &__form-btn
             padding: 14px
@@ -183,16 +180,19 @@
             //@include secondary-h3
 
         &__form-text-small
-            //@include tertiary-h4
+            font-weight: normal
+            font-size: 14px
+            line-height: 17px
 
         &__feedback
             margin-top: 0
             flex-basis: 500px
 
         &__feedback-heading
-            //@include primary-h3-text
+            @include landing-h4($primary-text-white)
 
         &__feedback-link
+            @include landing-h6($primary-text-white)
             &:nth-child(1)
                 order: 1
             &:nth-child(2)

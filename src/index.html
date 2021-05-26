@@ -784,9 +784,9 @@
             <p class="subscribe__card-price">
                 0 ₽
             </p>
-            <a href="#feedback" class="subscribe__card-link">
+            <span class="subscribe__card-link isDisabled">
                 Выбрать
-            </a>
+            </span>
         </div>
     </div>
     <p class="subscribe__ps">
@@ -1009,20 +1009,20 @@
 <!-- feedback -->
 <section class="feedback" id="feedback">
     <h2 class="feedback__heading">
-        Остались вопросы?
+        Оставьте нам ваши контакты
     </h2>
 
     <div class="feedback__content">
         <form action="actions/sendToBidFromLand_bot.php" method="post" class="feedback__form">
             <h3 class="feedback__form-heading">
-                Оставьте нам ваши контакты
+                Наши менеджеры свяжутся с вами
             </h3>
             <label for="name"></label>
             <input required type="text" name="name" id="name" class="feedback__form-input feedback__form-input-text"
                    placeholder="Имя">
             <label for="phone"></label>
             <input required type="tel" id="phone" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
-                   name="phone" class="feedback__form-input feedback__form-input-tel" placeholder="Телефон">
+                   name="phone" class="feedback__form-input feedback__form-input-tel" placeholder="Телефон, Telegram или WhatsApp">
 
             <input type="hidden" name="act" value="bid">
             <button type="submit" class="feedback__form-btn">
