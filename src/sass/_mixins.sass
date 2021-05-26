@@ -106,7 +106,7 @@
     color: $text-color
 
 /* Other */
-@mixin padding-around($top: 60px, $left-right: 16px, $bottom: 40px)
+@mixin padding-around($top: 40px, $left-right: 16px, $bottom: 40px)
     padding: $top $left-right $bottom
 
 @mixin bg-img($pos1: center, $pos2: center, $size: contain)
@@ -156,6 +156,9 @@
     justify-content: center
     align-items: center
     text-decoration: none
+    font-weight: bold
+    font-size: 14px
+    line-height: 18px
     //@include landing-h5($color)
     transition: all .1s
     background: no-repeat right center / 86px 28px url('../img/subtract.svg'), no-repeat left center / 14px 8px url('../img/arrow.svg')

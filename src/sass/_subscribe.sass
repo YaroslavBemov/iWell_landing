@@ -1,5 +1,5 @@
 .subscribe
-    @include padding-around
+    @include padding-around()
     background-color: $primary-bg-white
 
     &__heading
@@ -13,112 +13,57 @@
         //gap: 16px
 
     &__card
+        width: calc((100% - 32px) / 2)
+        min-height: 154px
         margin: 8px
         padding: 18px 10px
-        flex: 0 1 110px
         border-radius: 5px
-
-        //height: 397px
-        //width: 283px
-        //padding: 50px 0
         display: flex
         flex-direction: column
         justify-content: space-between
         align-items: center
         background-color: $secondary-text-green
-        //background-image: url('../img/pattern.svg')
-        //@include bg-img(right)
-        //background-position: center top
-        //&:nth-child(1)
-        //    margin-top: 0
-        //    margin-left: 0
-        //&:nth-child(2)
-        //    margin-top: 0
-        //    margin-right: 0
-        //&:nth-child(3)
-        //    margin-bottom: 0
-        //    margin-left: 0
-        //&:nth-child(4)
-        //    margin-bottom: 0
-        //    margin-right: 0
         &:last-child
             display: none
 
     &__card-heading
         display: none
-        //@include tertiary-h4($primary-text-white)
 
     &__card-count
-        //margin-top: 18px
-        font-style: normal
+        color: $primary-text-white
+        text-align: center
         font-weight: 500
         font-size: 14px
         line-height: 18px
-        //@include tertiary-h4($primary-text-white)
-        text-align: center
-        color: $primary-text-white
 
     &__card-gift
         margin-top: 6px
-        font-style: normal
+        color: $primary-text-white
         font-weight: normal
         font-size: 12px
         line-height: 14px
-        text-align: center
-        letter-spacing: 0.44px
-        color: $primary-text-white
 
     &__card-price
         margin-top: 6px
-        font-style: normal
+        color: $primary-text-white
         font-weight: bold
         font-size: 24px
         line-height: 36px
-        text-align: center
-        letter-spacing: 0.44px
-        //@include primary-h3-text($primary-text-white)
-        //font-style: normal
-        //font-weight: 500
-        //font-size: 36px
-        //line-height: 48px
-        //text-align: center
-        //letter-spacing: 0.44px
-        color: $primary-text-white
 
     &__card-link
         margin-top: 12px
-        font-style: normal
-        font-weight: normal
-        font-size: 14px
-        line-height: 18px
-        @include link-arrow-mobile-sm($primary-text-white)
         color: $primary-text-white
-        &:hover
-            border-color: $secondary-text-orange-hover
-            color: $secondary-text-orange-hover
+        @include link-arrow-mobile-sm($primary-text-white)
 
     &__ps
         margin-top: 10px
-        font-style: normal
         font-weight: normal
         font-size: 12px
         line-height: 18px
 
-@media (min-width: 450px) and (max-width: 590px)
-    .subscribe__cards
-        padding: 0 70px
-
-@media (min-width: 590px) and (max-width: 628px)
-    .subscribe__cards
-        padding: 0 90px
-
-@media (min-width: 628px) and (max-width: 767px)
-    .subscribe__cards
-        padding: 0 158px
-
 @media (min-width: $media-tablet)
     .subscribe
-        padding: 60px 30px
+        padding: 60px 30px 30px
 
         &__heading
             font-style: normal
@@ -128,24 +73,25 @@
 
         &__cards
             margin-top: 40px
-            justify-content: space-evenly
+            padding-left: calc(50% - 244px)
+            padding-right: calc(50% - 244px)
+            justify-content: center
 
         &__card
-            //padding: 20px 20px
-            flex: 0 1 220px
+            width: 220px
+            min-height: 269px
+            margin: 12px
         &__card-heading
             display: block
             @include secondary-text-h2-bold($primary-text-white)
 
         &__card-count
-            //margin-top: 30px
             font-style: normal
             font-weight: 450
             font-size: 24px
             line-height: 36px
 
         &__card-gift
-            //margin-top: 8px
             font-style: normal
             font-weight: 500
             font-size: 24px
@@ -170,54 +116,22 @@
             font-size: 14px
             line-height: 21px
 
-@media (min-width: 812px) and (max-width: 951px)
-    .subscribe__cards
-        padding: 0 70px
-
-@media (min-width: 952px) and (max-width: 1011px)
-    .subscribe__cards
-        padding: 0 100px
-
-@media (min-width: 1012px) and (max-width: 1199px)
-    .subscribe__cards
-        padding: 0 200px
-
-
 @media (min-width: $media-desktop)
     .subscribe
         padding: 80px 0
         @include padding-left-right-calc($content)
-        //background-color: $primary-bg-white
 
         &__heading
             @include landing-h3()
-            //color: $primary-text-grey
 
         &__cards
             margin-top: 80px
-            //display: flex
-            //justify-content: space-between
+            padding-left: 0
+            padding-right: 0
 
         &__card
-            //height: 397px
-            //width: 283px
             padding: 20px 0
-            //display: flex
-            //flex-direction: column
-            //justify-content: space-between
-            //align-items: center
-            //background-color: $secondary-text-green
-            //background-image: url('../img/Vector.png')
-            ////@include bgi
-            //background-position: center top
-            //&:nth-child(1)
-            //    margin: 0
-            //&:nth-child(2)
-            //    margin: 0
-            //&:nth-child(3)
-            //    margin: 0
-            //&:nth-child(4)
-            //    margin: 0
+            margin: 7px
             &:last-child
                 display: flex
 
@@ -227,7 +141,6 @@
 
         &__card-count
             @include landing-h6($primary-text-white)
-            //text-align: center
 
         &__card-gift
             @include landing-h4($primary-text-white)
@@ -237,8 +150,6 @@
             @include landing-h2()
 
         &__card-link
-            //@include link-arrow
-            //@include secondary-h3($primary-text-white)
             padding: 10px
             @include link-arrow-desktop-sm($primary-text-white)
 
