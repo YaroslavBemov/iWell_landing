@@ -7,8 +7,6 @@
 
     &__swiper-container
         margin-top: 40px
-        max-width: 340px
-        //height: 360px
 
     &__swiper-wrapper
 
@@ -17,6 +15,21 @@
         flex-direction: column
         border-radius: 5px
         overflow: hidden
+    &__card-img
+        max-width: 450px
+        height: 288px
+        border-radius: 5px
+        background-repeat: no-repeat
+        background-size: cover
+    &_trainer1
+        background-image: url("../img/Natalia-Barseneva-680.jpg")
+    &_trainer2
+        background-image: url("../img/Alina-Janabaeva-680.jpg")
+    &_trainer3
+        background-image: url("../img/Elena-Rojnova-680.jpg")
+    &_trainer4
+        background-image: url("../img/Natalia-Gureeva-680.jpg")
+
 
     &__arrow
         display: block
@@ -36,11 +49,7 @@
 
     &__card
 
-    &__card-img
-        width: 288px
-        height: 288px
-        margin: 0 auto
-        border-radius: 5px
+
 
     &__card-head
         padding: 16px 0 10px
@@ -67,13 +76,11 @@
 
     &__card-rating
         margin-top: 10px
-        //@include tertiary-h4
         background-image: url('../img/start-small-icon.svg')
         background-repeat: no-repeat
         background-position: 30px center
 
     &__card-rating-icon
-        //margin-left: 6px
 
     &__arrows
 
@@ -89,14 +96,11 @@
 
         &__swiper-container
             margin-top: 60px
-            max-width: 711px
-            //overflow: visible
 
         &__card-head
             padding-top: 30px
 
         &__card-img
-            width: 340px
             height: 340px
 
         &__card-name
@@ -117,10 +121,7 @@
         background-color: $primary-bg-white
 
         &__heading
-            //font-style: normal
-            //font-weight: 500
-            //font-size: 64px
-            //line-height: 64px
+
             @include landing-h3()
 
         &__swiper-container
@@ -128,21 +129,13 @@
             margin-top: 80px
 
         &__cards
-            //margin-top: 80px
-            //display: flex
 
         &__card
 
         &__card-img
-            width: 273px
             height: 273px
 
         &__card-head
-            //margin-top: 30px
-            //padding-bottom: 10px
-            //display: flex
-            //align-items: center
-            //border-bottom: 1px solid $tertiary-dark-grey
 
         &__card-name
             @include secondary-h3()
@@ -150,23 +143,14 @@
         &__card-link
 
         &__card-body
-            //padding-top: 10px
 
         &__card-type
             @include landing-h4()
-            //text-align: left
-            //color: $primary-text-grey
 
         &__card-rating
-            //margin-top: 10px
             @include landing-h6()
             align-items: center
-            //text-align: left
-            //color: $primary-text-grey
 
         &__arrows
-            //margin: 100px auto 0
-            //display: flex
-            //justify-content: center
 
         &__arrow
