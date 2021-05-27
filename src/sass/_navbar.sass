@@ -15,13 +15,6 @@
             width: 66px
             height: 37px
 
-    & ul
-        margin: 0
-        padding: 0
-        list-style: none
-        overflow: hidden
-        background-color: $primary-bg-gray
-
     & li a
         display: block
         padding: 20px 20px
@@ -31,18 +24,32 @@
         font-size: 18px
         line-height: 24px
         color: $primary-text-white
-        transition: all .1s
-
-    & li a:hover
-        color: $secondary-text-orange-hover
+        transition: color .1s
+        &:hover
+            color: $secondary-text-orange-hover
 
     & .menu-btn:hover
         background-color: #ded9d9
 
     & .menu
-        clear: both
-        max-height: 0
-        transition: background-color .2s ease-out
+        height: 100vh
+        padding-top: 100px
+        position: absolute
+        top: -100vh
+        bottom: 0
+        left: 0
+        right: 0
+        opacity: 0
+        display: flex
+        flex-direction: column
+        list-style: none
+        background-image: linear-gradient(to right, #528b6a, #a8ceb9)
+        transition: all .3s ease-out
+        transition-property: top, opacity
+
+    & .menu-btn:checked ~ .menu
+        top: 0
+        opacity: 1
 
     & .menu-icon
         cursor: pointer
@@ -70,68 +77,41 @@
         transition: background .2s ease-out
         width: 18px
 
-
     & .menu-icon .navicon:before
         background: $primary-bg-white
         content: ''
         display: block
         height: 100%
-        position: absolute
-        transition: all .2s ease-out
-        width: 100%
-    & .menu-icon .navicon:after
-        background: $primary-bg-white
-        content: ''
-        display: block
-        height: 100%
-        position: absolute
-        transition: all .2s ease-out
-        width: 100%
-
-
-    & .menu-icon .navicon:before
         top: 5px
-
+        position: absolute
+        transition: all, top .2s ease-out
+        transition-property: transform, top
+        width: 100%
 
     & .menu-icon .navicon:after
+        background: $primary-bg-white
+        content: ''
+        display: block
+        height: 100%
         top: -5px
-
-
+        position: absolute
+        transition: all, top .2s ease-out
+        transition-property: transform, top
+        width: 100%
 
     & .menu-btn
         display: none
 
-
-    & .menu-btn:checked ~ .menu
-        position: absolute
-        min-height: 100vh
-        top: 0px
-        bottom: 0
-        left: 0
-        right: 0
-        padding-top: 100px
-        display: flex
-        flex-direction: column
-
     & .menu-btn:checked ~ .menu-icon .navicon
         background: transparent
 
-
     & .menu-btn:checked ~ .menu-icon .navicon:before
         transform: rotate(-45deg)
-
+        top: 0
 
     & .menu-btn:checked ~ .menu-icon .navicon:after
         transform: rotate(45deg)
-
-
-    & .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before
         top: 0
-
-    & .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after
-        top: 0
-
-
 
 @media (min-width: $media-tablet)
     .header
