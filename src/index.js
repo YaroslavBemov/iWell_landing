@@ -2,8 +2,8 @@ import 'normalize.css'
 import './sass/main.sass'
 // import './sass/modal.sass'
 
-import './js/metriks/googleMetrika'
-import './js/metriks/yandexMetrika'
+// import './js/metriks/googleMetrika'
+// import './js/metriks/yandexMetrika'
 import modal from './js/modal'
 
 import Swiper from 'swiper/bundle'
