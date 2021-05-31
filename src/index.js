@@ -9,6 +9,18 @@ import modal from './js/modal'
 import Swiper from 'swiper/bundle'
 import 'swiper/swiper-bundle.css'
 
+
+const links = document.querySelectorAll('.menu li a')
+const menuBtn = document.getElementById('menu-btn')
+const logo = document.querySelector('.logo')
+
+const hideMenu = () => menuBtn.checked = false
+
+logo.addEventListener('click', hideMenu)
+links.forEach(item => {
+    item.addEventListener('click', hideMenu)
+})
+
 // const $ = {}
 // window.$ = {}
 // $.modal = modal
@@ -57,7 +69,6 @@ import 'swiper/swiper-bundle.css'
 // breakpoint.addListener(breakpointChecker);
 // // kickstart
 // breakpointChecker();
-
 
 
 const trainersSwiper = new Swiper('.swiper-container.trainers__swiper-container', {
