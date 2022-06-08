@@ -1,7 +1,7 @@
 <?php
 
-$token = "1636349509:AAGTDPQ4NZOA5aKGRtP_LgjaiEXbdrQDYHA";
-$chat_id = "-523610126";
+$token = "";
+$chat_id = "";
 define('DELAY', 3000);
 define('REDIRECT_URL', 'https://iwellmart.com');
 
