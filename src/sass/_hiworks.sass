@@ -1,38 +1,143 @@
 .hiworks
-    padding: 80px
-    @include pltc
+    @include padding-around
     background-color: $primary-bg-white
 
     &__heading
-        @include primary-h2
-        color: $primary-text-grey
+        @include secondary-h3
 
     &__container
+        margin-top: 40px
         display: flex
         justify-content: space-between
         align-items: center
 
-    &__img
-        // width: 50%
+    &__img-box
+        display: none
 
-    &__element
-        margin-left: 88px
+    &__link-arrow
+        //display: none
 
     &__cards
-        display: flex
-        flex-wrap: wrap
-        max-width: 502px
+        //max-width: 502px
+        //display: flex
+        //flex-wrap: wrap
 
     &__card
-        &:first-child .hiworks__card-head
-            margin-top: 0
+        display: flex
+
+    &__card-element
+        margin-right: 14px
+        padding-top: 7px
+        display: flex
+        flex-direction: column
+        flex-basis: 60px
+        flex-shrink: 0
+
+        background: linear-gradient(180deg, transparent 26px, #236640 27px, #236640 27px, transparent 28px), linear-gradient(90deg, transparent 19px, #236640 20px, #236640 20px, transparent 21px)
+
+    &__card-circle
+        height: 40px
+        width: 40px
+        flex-shrink: 0
+        border: 1px solid #9EAEA4
+        border-radius: 50%
+        text-align: center
+        background: #EDECEA
+
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 40px
+        letter-spacing: 0.44px
+        color: #236640
+
+    &__card-content
 
     &__card-head
-        margin-top: 40px
-        @include primary-h3-bold
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 24px
         color: $secondary-text-green
 
     &__card-text
-        margin-top: 16px
-        @include primary-h3-text
+        margin: 10px 0 20px
+
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 24px
         color: $primary-text-grey
+
+
+@media (min-width: $media-tablet)
+    .hiworks
+        padding: 60px 30px
+
+        &__heading
+            font-style: normal
+            font-weight: 500
+            font-size: 64px
+            line-height: 64px
+
+        &__card-head
+            font-style: normal
+            font-weight: bold
+            font-size: 24px
+            line-height: 36px
+
+        &__card-text
+            font-style: normal
+            font-weight: 450
+            font-size: 24px
+            line-height: 36px
+
+
+@media (min-width: $media-desktop)
+    .hiworks
+        padding: 80px 0
+        @include padding-left-right-calc(1200px)
+
+        &__heading
+            @include primary-h2()
+
+        &__container
+
+        &__img-box
+
+            display: flex
+            flex-direction: column
+            align-items: center
+
+        &__img
+            width: 492px
+            height: 592px
+            background-image: url('../img/girl-on-sofa.jpg')
+
+        &__link-arrow
+            margin-top: 40px
+            display: inline-block
+            @include link-arrow
+            @include secondary-h3()
+            border: 2px solid #979797
+
+        &__element
+
+        &__cards
+            max-width: 620px
+
+        &__card
+            &:last-child .hiworks__card-text
+                margin-bottom: 0
+
+        &__card-element
+
+        &__card-circle
+
+        &__card-content
+
+        &__card-head
+            @include primary-h3-bold($secondary-text-green)
+
+        &__card-text
+            @include primary-h3-text()

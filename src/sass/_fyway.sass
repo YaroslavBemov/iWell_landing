@@ -1,30 +1,126 @@
 .fyway
-    padding: 80px
-    @include pltc
+    @include padding-around
     background-color: $primary-bg-white
 
     &__heading
-        @include primary-h2
-        color: $primary-text-grey
+        @include secondary-h3
 
-    &__cards
-        margin-top: 80px
+    &__swiper-container
+        margin-top: 40px
+        max-width: 340px
+        //height: 350px
+
+    &__swiper-wrapper
+
+    &__swiper-slide
+        //max-width: calc(100vw - 60px)
         display: flex
-        flex-wrap: wrap
-        justify-content: space-around
-        gap: 50px
-
-    &__card
-        flex-basis: 340px
+        flex-direction: column
+        border-radius: 5px
+        overflow: hidden
 
     &__card-img
+        
+    &__arrow
+        display: block
+        margin-left: auto
 
     &__card-heading
-        margin-top: 20px
-        @include primary-h3-bold
+        margin-top: 16px
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 24px
         color: $primary-text-grey
 
     &__card-text
-        margin-top: 16px
-        @include primary-h3-text
-        color: $primary-text-grey
+        margin-top: 10px
+        @include tertiary-h4
+
+    &__swiper-pagination
+
+    &__swiper-button-prev
+        color: $tertiary-light-grey
+
+    &__swiper-button-next
+        color: $tertiary-light-grey
+
+    &__swiper-scrollbar
+
+
+@media (min-width: $media-tablet)
+    .fyway
+        padding: 60px 30px
+
+        &__heading
+            font-style: normal
+            font-weight: 500
+            font-size: 64px
+            line-height: 72px
+
+        &__card-heading
+            font-style: normal
+            font-weight: bold
+            font-size: 24px
+            line-height: 36px
+
+        &__card-text
+            font-style: normal
+            font-weight: 450
+            font-size: 24px
+            line-height: 36px
+
+        &__swiper-container
+            margin-top: 10px
+            max-width: none
+            margin-left: 0
+            margin-right: 0
+
+        &__swiper-wrapper
+            flex-wrap: wrap
+            justify-content: space-evenly
+
+        &__swiper-slide
+            margin-top: 30px
+            flex-basis: 340px
+
+        &__swiper-button-prev
+            display: none
+
+        &__swiper-button-next
+            display: none
+
+
+@media (min-width: $media-desktop)
+    .fyway
+        padding: 80px 0
+        @include padding-left-right-calc($content)
+
+        &__heading
+            //@include primary-h2
+
+        &__swiper-container
+            margin-top: 50px
+            //margin: 80px 0
+            //display: none
+
+        &__cards
+            //margin-top: 80px
+            //display: flex
+            //flex-wrap: wrap
+            //justify-content: space-around
+
+        &__card
+            //flex-basis: 340px
+
+        &__card-img
+
+        &__card-heading
+            //position: static
+            //margin-top: 20px
+            //@include primary-h3-bold
+
+        &__card-text
+            //position: static
+            //margin-top: 16px
+            //@include primary-h3-text
